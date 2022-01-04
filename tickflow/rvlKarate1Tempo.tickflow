@@ -1,6 +1,6 @@
 // Decompiled using Tickompiler v1.9.0
 // https://github.com/SneakySpook/Tickompiler
-#index 0x5A
+#index 0x59
 start:
 0x2D 0
 0xA6 0
@@ -468,7 +468,7 @@ rest 0x18	// 0.5 beats
 async_call sub79
 stop 
 loc1:
-set_cellanim 2, u"rom:/cellanim/rvlKarate_1.zlib", -1
+set_cellanim 2, u"rom:/cellanim/rvlKarate1_tempo.zlib", -1
 set_effect 2, u"rom:/effect/rvlKarate.zlib", -1
 0x83<1> 
 0xBB 

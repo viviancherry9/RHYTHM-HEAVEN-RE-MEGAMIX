@@ -20,4 +20,4 @@ a massive CTGP-esque modpack for Rhythm Heaven Megamix, containing mods from ton
 - The Eggo55
 - ThePurpleAnon
 - viviancherry
-- And more to come!
+- **And more to come!**

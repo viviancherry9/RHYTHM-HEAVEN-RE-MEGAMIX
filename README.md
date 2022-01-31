@@ -21,3 +21,7 @@ a massive CTGP-esque modpack for Rhythm Heaven Megamix, containing mods from ton
 - ThePurpleAnon
 - viviancherry
 - **And more to come!**
+
+## Wanna help?
+Join the RHModding Discord community!
+https://discord.gg/brBVnkgPAY

@@ -19,6 +19,7 @@ a massive CTGP-esque modpack for Rhythm Heaven Megamix, containing mods from ton
 - Chloe
 - The Eggo55
 - ThePurpleAnon
+- Terraria Tree
 - viviancherry
 - **And more to come!**
 

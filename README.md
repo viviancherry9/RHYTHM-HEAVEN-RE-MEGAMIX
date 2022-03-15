@@ -20,6 +20,7 @@ a massive CTGP-esque modpack for Rhythm Heaven Megamix, containing mods from ton
 - The Eggo55
 - ThePurpleAnon
 - Terraria Tree
+- minenice55
 - viviancherry
 - **And more to come!**
 

@@ -1,0 +1,2433 @@
+// Decompiled using Tickompiler v1.6.0-DEVELOPMENT
+// https://github.com/SneakySpook/Tickompiler
+#index 0x59
+start:
+0x2D 0
+0xA6 1
+0xA4 0x59
+0x75<1> 
+if 0
+    0xA5 1
+    0xA4<2> 1
+    async_call loc0
+else 
+    0xA6<1> 1
+    0x75 0
+endif 
+set_cat 0
+0x21 0x78
+speed 0x100
+input 0
+0x7C<3> 1
+if 0
+    0x7C 1, 0, 0x18
+endif 
+0x7C<3> 2
+if 0
+    0x7C 2, 0, 0x18
+endif 
+rest 0x18	// 0.5 beats
+game_model 0x1C, 0
+game_cellanim 0x1C, 2
+game_effect 0x1C, 2
+game_layout 0x1C, 4
+sub 5
+call loc1
+0xA8<1> 0x59
+0xA8<4> 0x59
+sub 8
+sub 6
+0x2B 0x1C, 2
+play_sfx 0x1000294
+0x88<7> 
+if 1
+    play_sfx 0x1000292
+endif 
+engine 0x1C
+sub 0xA
+async_call subA8
+0x2D 1
+0x7C<1> 7, 0, 0x30
+0x88 
+if 1
+    0x8A<3> 0
+endif 
+stop 
+loc0:
+set_cat 0
+0x21 0x78
+speed 0x100
+0x7C<3> 1
+if 0
+    0x7C 1, 0, 0x18
+endif 
+0x7C<3> 2
+if 0
+    0x7C 2, 0, 0x18
+endif 
+rest 0xC	// 0.25 beats
+engine 0x49
+rest 0x18	// 0.5 beats
+sub 4
+0x81 
+if 1
+    0x84<1> 
+    label 0x300
+    rest 0xC	// 0.25 beats
+    0x81 
+    if 1
+        0x84<2> 0
+        if 0
+            goto 0x300
+        endif 
+    endif 
+endif 
+0xA4<2> 0
+rest 0x18	// 0.5 beats
+0x81 
+if 1
+    0x82 0x3E8
+    rest 0xC	// 0.25 beats
+    label 0x3DB
+    0x81 
+    if 1
+        0x82<1> 
+        if 0
+            rest 1	// 0.020833334 beats
+            goto 0x3DB
+        endif 
+    endif 
+    rest_reset 
+endif 
+label 0xC8
+0x103 
+if 0
+    rest 6	// 0.125 beats
+    goto 0xC8
+endif 
+0x7C<1> 7, 1, 0
+fade<1> 7, 1, 0
+0x76 7, 0
+0x100 
+rest 0x18	// 0.5 beats
+0x88 
+if 0
+    0xAB<4> 
+    if 1
+        0xAB<1> 
+    endif 
+endif 
+0x102 
+label 0xC7
+0xA7 
+if 1
+    goto 0xC5
+endif 
+rest 0x18	// 0.5 beats
+0x102<1> 0x18
+0x101 
+switch 
+    case 0x3E
+    0x102<2> 
+    if_geq 0x2B8
+        goto 0xC6
+    endif 
+    break 
+    case 0x3D
+    0x102<2> 
+    if_geq 0x228
+        goto 0xC6
+    endif 
+    break 
+    case 0x42
+    0x102<2> 
+    if_geq 0x258
+        goto 0xC6
+    endif 
+    break 
+    case 0x43
+    0x102<2> 
+    if_geq 0x1F8
+        goto 0xC6
+    endif 
+    break 
+    case 0x39
+    0x102<2> 
+    if_geq 0x1C8
+        goto 0xC6
+    endif 
+    break 
+    case 0x44
+    0x102<2> 
+    if_geq 0x288
+        goto 0xC6
+    endif 
+    break 
+    case 0x3F
+    0x102<2> 
+    if_geq 0x228
+        goto 0xC6
+    endif 
+    break 
+    case 0x3C
+    0x102<2> 
+    if_geq 0x228
+        goto 0xC6
+    endif 
+    break 
+    case 0x3A
+    0x102<2> 
+    if_geq 0x258
+        goto 0xC6
+    endif 
+    break 
+    case 0x3B
+    0x102<2> 
+    if_geq 0x258
+        goto 0xC6
+    endif 
+    break 
+    case 0x47
+    0x102<2> 
+    if_geq 0x228
+        goto 0xC6
+    endif 
+    break 
+    case 0x4F
+    0x102<2> 
+    if_geq 0x228
+        goto 0xC6
+    endif 
+    break 
+    case 0x4E
+    0x102<2> 
+    if_geq 0x228
+        goto 0xC6
+    endif 
+    break 
+    case 0x4D
+    0x102<2> 
+    if_geq 0x228
+        goto 0xC6
+    endif 
+    break 
+    case 0x46
+    0x102<2> 
+    if_geq 0x228
+        goto 0xC6
+    endif 
+    break 
+    case 0x4A
+    0x102<2> 
+    if_geq 0x258
+        goto 0xC6
+    endif 
+    break 
+    case 0x50
+    0x102<2> 
+    if_geq 0x258
+        goto 0xC6
+    endif 
+    break 
+    case 0x45
+    0x102<2> 
+    if_geq 0x228
+        goto 0xC6
+    endif 
+    break 
+    case 0x4C
+    0x102<2> 
+    if_geq 0x288
+        goto 0xC6
+    endif 
+    break 
+    case 0x4B
+    0x102<2> 
+    if_geq 0x258
+        goto 0xC6
+    endif 
+    break 
+    case 0x48
+    0x102<2> 
+    if_geq 0x2B8
+        goto 0xC6
+    endif 
+    break 
+    case 0x2C
+    0x102<2> 
+    if_geq 0x2E8
+        goto 0xC6
+    endif 
+    break 
+    case 0x37
+    0x102<2> 
+    if_geq 0x2E8
+        goto 0xC6
+    endif 
+    break 
+    case 0x35
+    0x102<2> 
+    if_geq 0x378
+        goto 0xC6
+    endif 
+    break 
+    case 0x38
+    0x102<2> 
+    if_geq 0x2E8
+        goto 0xC6
+    endif 
+    break 
+    case 0x2A
+    0x102<2> 
+    if_geq 0x318
+        goto 0xC6
+    endif 
+    break 
+    case 0x29
+    0x102<2> 
+    if_geq 0x258
+        goto 0xC6
+    endif 
+    break 
+    case 0x2D
+    0x102<2> 
+    if_geq 0x348
+        goto 0xC6
+    endif 
+    break 
+    case 0x33
+    0x102<2> 
+    if_geq 0x258
+        goto 0xC6
+    endif 
+    break 
+    case 0x31
+    0x102<2> 
+    if_geq 0x2E8
+        goto 0xC6
+    endif 
+    break 
+    case 0x32
+    0x102<2> 
+    if_geq 0x2E8
+        goto 0xC6
+    endif 
+    break 
+    case 0x34
+    0x102<2> 
+    if_geq 0x3A8
+        goto 0xC6
+    endif 
+    break 
+    case 0x2E
+    0x102<2> 
+    if_geq 0x288
+        goto 0xC6
+    endif 
+    break 
+    case 0x2B
+    0x102<2> 
+    if_geq 0x2B8
+        goto 0xC6
+    endif 
+    break 
+    case 0x2F
+    0x102<2> 
+    if_geq 0x348
+        goto 0xC6
+    endif 
+    break 
+    case 0x36
+    0x102<2> 
+    if_geq 0x2E8
+        goto 0xC6
+    endif 
+    break 
+    case 0x41
+    0x102<2> 
+    if_geq 0x228
+        goto 0xC6
+    endif 
+    break 
+    case 0x40
+    0x102<2> 
+    if_geq 0x228
+        goto 0xC6
+    endif 
+    break 
+    case 0x49
+    0x102<2> 
+    if_geq 0x228
+        goto 0xC6
+    endif 
+    break 
+    case 0x30
+    0x102<2> 
+    if_geq 0x228
+        goto 0xC6
+    endif 
+    break 
+    case 0xFF
+    0x102<2> 
+    if_geq 0x2B8
+        goto 0xC6
+    endif 
+    break 
+    default 
+    0x102<2> 
+    if_geq 0x240
+        goto 0xC6
+    endif 
+    break 
+endswitch 
+goto 0xC7
+label 0xC6
+0xA7<3> 
+if 0
+    0xA6<1> 0
+endif 
+label 0xC5
+0xB5 0x509B42
+0x7C 7, 1, 0
+0xB5 0x509B55
+0x100<1> 
+rest 0x18	// 0.5 beats
+0xB5 0x509B68
+0xA5 0
+0x81 
+if 1
+    0x8C<1> 1
+endif 
+0xB5 0x509B7B
+stop 
+loc1:
+set_cellanim 2, u"rom:/cellanim/ntrAssemble.zlib", -1
+set_cellanim 3, u"rom:/cellanim/ntrAssembleBlackOut.zlib", -1
+0x83<1> 
+0xBB 
+if 0
+    0xBC 
+endif 
+sub 7
+0xBD 
+0x8C<2> 3
+0x61<2> u"agb_karate_short_final"
+0x81 
+if 0
+    0x86 
+    if 0
+        0x61<3> 0
+        rest 0xC	// 0.25 beats
+        sub 3
+    endif 
+else 
+    0x8C<3> 
+    0x86 
+    if 0
+        0x61<3> 0
+        rest 0xC	// 0.25 beats
+        sub 3
+        0x81<1> 
+        if 1
+            0x87<1> 0, 0
+            rest 0xC	// 0.25 beats
+            label 0x4D2
+            0x81 
+            if 1
+                0x87<3> 0
+                if 0
+                    rest 1	// 0.020833334 beats
+                    goto 0x4D2
+                endif 
+            endif 
+        endif 
+    else 
+        0x87<2> 0
+        rest 0xC	// 0.25 beats
+        label 0x10E1
+        0x81 
+        if 1
+            0x87<3> 0
+            if 0
+                rest 1	// 0.020833334 beats
+                goto 0x10E1
+            endif 
+        endif 
+        0x61<1> 0, 0
+    endif 
+endif 
+rest 0xC	// 0.25 beats
+0x5D<2> u"GROUP_WSD_TUTORIAL_KUMITATE"
+0x81 
+if 0
+    0x86 
+    if 0
+        0x5D<3> 2
+        rest 0xC	// 0.25 beats
+        sub 3
+    endif 
+else 
+    0x8C<3> 
+    0x86 
+    if 0
+        0x5D<3> 2
+        rest 0xC	// 0.25 beats
+        sub 3
+        0x81<1> 
+        if 1
+            0x87 2, 2
+            rest 0xC	// 0.25 beats
+            label 0x929
+            0x81 
+            if 1
+                0x87<3> 2
+                if 0
+                    rest 1	// 0.020833334 beats
+                    goto 0x929
+                endif 
+            endif 
+        endif 
+    else 
+        0x87<2> 2
+        rest 0xC	// 0.25 beats
+        label 0x1538
+        0x81 
+        if 1
+            0x87<3> 2
+            if 0
+                rest 1	// 0.020833334 beats
+                goto 0x1538
+            endif 
+        endif 
+        set_sfx<1> 2, 2
+    endif 
+endif 
+rest 0xC	// 0.25 beats
+0x5D<2> u"MOD_ASSEMBLE"
+0x81 
+if 0
+    0x86 
+    if 0
+        0x5D<3> 3
+        rest 0xC	// 0.25 beats
+        sub 3
+    endif 
+else 
+    0x8C<3> 
+    0x86 
+    if 0
+        0x5D<3> 3
+        rest 0xC	// 0.25 beats
+        sub 3
+        0x81<1> 
+        if 1
+            0x87 3, 3
+            rest 0xC	// 0.25 beats
+            label 0xD80
+            0x81 
+            if 1
+                0x87<3> 3
+                if 0
+                    rest 1	// 0.020833334 beats
+                    goto 0xD80
+                endif 
+            endif 
+        endif 
+    else 
+        0x87<2> 3
+        rest 0xC	// 0.25 beats
+        label 0x198F
+        0x81 
+        if 1
+            0x87<3> 3
+            if 0
+                rest 1	// 0.020833334 beats
+                goto 0x198F
+            endif 
+        endif 
+        set_sfx<1> 3, 3
+    endif 
+endif 
+rest 0xC	// 0.25 beats
+sub 3
+0x83 0
+label 0xC8
+cellanim_busy 2
+if 0
+    goto 0xC9
+endif 
+rest 1	// 0.020833334 beats
+goto 0xC8
+label 0xC9
+return 
+
+assets:
+0x92 0, 0x28
+0x93 0, 0xE, "rvl_assemble_L_cp_DEF_Hi", "rvl_assemble_L_cp_DEF_Ng"
+0x94 0, "result_common_Hi", "result_common_Ok", "result_common_Ng"
+0x95 0xE, "rvl_assemble_L_caption"
+0x92 1, 0x32
+0x93 1, 0xE, "rvl_assemble_L_cp_FINISH_Hi", "rvl_assemble_L_cp_FINISH_Ng"
+0x94 0, "result_common_Hi", "result_common_Ok", "result_common_Ng"
+0x95 0xE, "rvl_assemble_L_caption"
+0x92 7, 0xA
+0x93 7, 0xE, "rvl_assemble_L_cp_STAR_Hi", "rvl_assemble_L_cp_STAR_Ng"
+0x94 0, "result_common_Hi", "result_common_Ok", "result_common_Ng"
+0x95 0xE, "rvl_assemble_L_caption"
+0x98 1, 1
+0x88 
+if 1
+    0x88<1> 
+    if 1
+        0x88<2> 
+        switch 
+            case 1
+            0x8A<4> 1, 1
+            break 
+            case 2
+            0x8A<4> 1, 2
+            break 
+            case 3
+            0x8A<4> 1, 3
+            break 
+        endswitch 
+    endif 
+else 
+    0xAB<3> 1
+    if 1
+        0xAC 0
+    else 
+        0xAD 0
+    endif 
+endif 
+stop 
+
+subA9:
+set_cat 0
+async_call assets
+0xB7 
+if 0
+    0x53 0x1000068
+    0x23 0x1000068
+else 
+    0x4F 0x1000068
+    0x23 0x1000068
+endif 
+speed 0x100
+0x8B 0, 0
+rest 0x60	// 2.0 beats
+0xBA 
+0xB7 
+if 0
+    sub 2
+    0x88 
+    if 1
+        0x88<5> 
+    endif 
+    0x55 1
+else 
+    sub 1
+    0x88 
+    if 1
+        0x88<5> 
+    endif 
+    0x51 1
+    0x63 0x1000068
+endif 
+rest 0
+rest 0x30
+0x101<1> 
+0xB6 
+0x88 
+if 1
+    0x8A 
+    0x88<1> 
+    if 2
+        0x8A<6> 1
+    else 
+        if 1
+            async_sub 0x55
+        endif 
+    endif 
+else 
+    0xAB<3> 1
+    if 1
+        async_sub 0x54
+    endif 
+endif 
+0x8F 0
+
+//game goes here
+
+input 1
+rest 0xC0	// 4.0 beats
+rest 0xC0	// 4.0 beats
+async_call widget75
+rest 0xC0	// 4.0 beats
+rest 0xC0	// 4.0 beats
+async_call widget100
+rest 0xC0	// 4.0 beats
+rest 0xC0	// 4.0 beats
+async_call widget75
+rest 0xC0	// 4.0 beats
+rest 0xC0	// 4.0 beats
+async_call widget75
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+rest 0x24	// 0.75 beats
+async_call widget50
+rest 0xC	// 0.25 beats
+rest 0xC0	// 4.0 beats
+async_call widget75
+rest 0xC0	// 4.0 beats
+rest 0xC0	// 4.0 beats
+async_call widget100
+rest 0xC0	// 4.0 beats
+rest 0xC0	// 4.0 beats
+async_call slotA75
+rest 0xC0	// 4.0 beats
+rest 0xC0	// 4.0 beats
+async_call widget75
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+rest 0x24	// 0.75 beats
+async_call widget50
+rest 0x6	// 0.125 beats
+rest 0xC0	// 4.0 beats
+rest 0xC0	// 4.0 beats
+rest 0xC0	// 4.0 beats
+rest 0x30	// 1.0 beats
+// rest 0x18	// 0.5 beats
+async_call widget75
+rest 0xC0	// 4.0 beats
+async_call widget75
+rest 0xC0	// 4.0 beats
+async_call widget75
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+rest 0x18	// 0.5 beats
+async_call widget75
+rest 0x18	// 0.5 beats
+rest 0xC0	// 4.0 beats
+async_call widget75
+rest 0xC0	// 4.0 beats
+async_call widget75
+rest 0xC0	// 4.0 beats
+async_call widget75
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+rest 0x18	// 0.5 beats
+async_call widget50
+rest 0xC0	// 4.0 beats
+async_call widget75
+rest 0xC0	// 4.0 beats
+rest 0xC0	// 4.0 beats
+async_call widget100
+rest 0xC0	// 4.0 beats
+rest 0xC0	// 4.0 beats
+async_call widget75
+rest 0xC0	// 4.0 beats
+rest 0xC0	// 4.0 beats
+async_call widget75
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+rest 0x24	// 0.75 beats
+async_call widget50
+rest 0xC	// 0.25 beats
+rest 0x60	// 2.0 beats
+rest 0x60	// 2.0 beats
+
+fade 1, 1, 0x8
+rest 0x60	// 2.0 beats
+rest 0x60	// 2.0 beats
+
+0x8F 1
+game_cellanim 0x1C, 3
+0xAB<3> 1
+if 1
+	0xAC<3> 
+	if 1
+		0xAC<4> 
+		if 1
+			stop 
+		endif 
+	endif 
+endif 
+0x89<6> 
+if 1
+	0x8A<7> 
+	if 1
+		stop 
+	endif 
+endif 
+async_sub 0x10
+async_sub 0x15
+async_sub 0x1A
+engine 0x1C
+fade 1, 1, 0
+sub 4
+0x8B 0, 0
+fade<1> 1, 1, 0xC
+0x29<2> 
+
+async_call widget75
+rest 0xC0	// 4.0 beats
+async_call widget75
+rest 0xC0	// 4.0 beats
+async_call widget100
+rest 0x30	// 1.0 beats
+rest 0xC0	// 4.0 beats
+async_call widget50
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+async_call widget75
+rest 0xC0	// 4.0 beats
+async_call widget75
+rest 0xC0	// 4.0 beats
+async_call widget75
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+rest 0x18	// 0.5 beats
+star 0x1B0
+async_call widget200
+rest 0xC0	// 4.0 beats
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x8F 7
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+rest 0x18	// 0.5 beats
+0x2D 0
+sub 0xB
+stop 
+subA8:
+set_cat 0
+0x8B 0, 0
+0x70<1> 0xAA
+0xA7<2> 
+if 1
+	0x7C<2> 7
+	async_call subAA
+	stop 
+else 
+	0xA7<3> 
+	if 1
+		0x2E 0x18
+	else 
+		0x9B 
+	endif 
+endif 
+0x8F -1
+0x65<4> 0x12C, 0x3C
+0x65<3> 0, -0x50
+0x65<5> 2
+0x8B 0, 0
+0x53 0x1000133
+0x23 0x1000133
+speed 0x100
+input 0
+rest 0x60	// 2.0 beats
+
+0x66 8, "ntrAssemble_tutorial_a"
+0x66<1> 
+
+label 0x129E0
+label 0x7B
+rest 0x30 // 1.0 beats
+0x81 
+if 1
+	0x83 0
+endif 
+0x6D 1, 0x10002BA, 0x10002BB
+sub 0
+0x65<2> 
+0x81 
+if 1
+	0x83<1> 
+	0xBB 
+	if 0
+		0xBC 
+	endif 
+	sub 7
+	0xBD 
+	0x82 0x1F4
+	rest 0xC	// 0.25 beats
+	label 0x63F
+	0x81 
+	if 1
+		0x82<1> 
+		if 0
+			rest 1	// 0.020833334 beats
+			goto 0x63F
+		endif 
+	endif 
+	rest_reset 
+endif 
+rest 0x30	// 1.0 beats
+0x66<3> 
+if 0
+	0x66<2> 
+	label 0x129E0
+	goto 0x7B
+endif 
+
+input 1
+
+speed 0x100
+rest 0x30	// 1.0 beats
+sub 2
+0x9C<2> 
+0xA3 1, 1
+0x9D 1
+0x9E 0, 0, 0xA
+0x9E 1, 0, 0xA
+0x9E 2, 0, 0xA
+0x9E 3, 0, 0xA
+0x9E 0, 1, 3
+0x9E 1, 1, 0xA
+0x9E 2, 1, 0xA
+0x9E 3, 1, 0xA
+
+rest 0x18	// 0.5 beats
+0x55 1
+
+
+0x67<3> -0x64
+0x67<1> 8, "ntrAssemble_tutorial_c_00"
+0x9F 3
+0x9F<7>
+0x9F<8> 0, 0x64
+0x9F<9> 0x100
+0x9F<0xA> 2
+0x9F<5> 0
+0xA1 
+label 0x1F4
+0xA2
+0xA2<4> 
+if_geq 3
+	0x9F<4> 
+	if 0
+		0x9D<1> 
+	endif 
+endif 
+async_sub 0x38
+
+rest 0x60	// 2.0 beats
+rest 0x60	// 2.0 beats
+rest 0x60	// 2.0 beats
+rest 0x30	// 1.0 beats
+async_call widget100
+rest 0x30	// 1.0 beats
+
+0xA2<2> 
+if 1
+	0xA2<3> 
+endif 
+0x9F<4> 
+if 1
+	0x81 
+	if 1
+		0x84<2> 2
+		if 1
+			0xA1<1> 
+			goto 0x1F5
+		endif 
+	else 
+		0xA1<1> 
+		goto 0x1F5
+	endif 
+endif 
+0x9F<4> 
+if 0
+	goto 0x1F4
+endif 
+0x81 
+if 1
+	0x84<3> 3
+	if 1
+		goto 0x1F4
+	endif 
+endif 
+0x81 
+0xA1<1> 
+label 0x1F5
+if 1
+	0x84<1> 
+	label 0x3B6
+	0x81 
+	if 1
+		0x84<2> 0
+		if 0
+			goto 0x3B6
+		endif 
+	endif 
+endif 
+
+input 0
+0x57 0x32
+0x67<2>
+rest 0x60	// 2.0 beats
+0x66 8, "ntrAssemble_tutorial_e"
+0x66<1> 
+
+label 0x1290
+label 0xAAA
+rest 0x30 // 1.0 beats
+0x81 
+if 1
+	0x83 0
+endif 
+0x6D 1, 0x10002BA, 0x10002BB
+sub 0
+0x65<2> 
+0x81 
+if 1
+	0x83<1> 
+	0xBB 
+	if 0
+		0xBC 
+	endif 
+	sub 7
+	0xBD 
+	0x82 0x1F4
+	rest 0xC	// 0.25 beats
+	label 0x6FF
+	0x81 
+	if 1
+		0x82<1> 
+		if 0
+			rest 1	// 0.020833334 beats
+			goto 0x6FF
+		endif 
+	endif 
+	rest_reset 
+endif 
+rest 0x30	// 1.0 beats
+0x66<3> 
+if 0
+	0x66<2> 
+	label 0x1290
+	goto 0xAAA
+endif 
+
+rest 0x60	// 2.0 beats
+rest 0xC0	// 4.0 beats
+0x2D 1
+0x8C 1
+// 0x7C 7, 0, 0x30
+async_call subA9
+stop 
+
+//stored practice here sorry nothing
+subAA:
+set_cat 0
+sub 0xC
+0x2B 0x1C, 3
+play_sfx 0x1000294
+0x88<7> 
+if 1
+	play_sfx 0x1000292
+endif 
+engine 0x1C
+sub 0xA
+async_call subA9
+0x2D 1
+0x7C<1> 7, 0, 0x30
+stop 
+
+
+// These subs below only spawn widgets in 1 slot, and not 4.
+
+// 2.0 beats, slots 1-4
+
+slotA200:
+0x103 0, 1
+0x103<3> 0
+0x103<1> 0, 1, -4
+0x103<1> 0, 0, 4
+rest 0x30	// 1.0 beats
+0x103<1> 0, 1, -3
+0x103<1> 0, 0, 3
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 0, 1, -2
+0x103<1> 0, 0, 2
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 0, 1, -1
+0x103<1> 0, 0, 1
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 0, 1, 0
+0x103<1> 0, 0, 0
+rest 0x30	// 1.0 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 0
+rest 0x30	// 1.0 beats
+0x103<1> 0, 1, 1
+0x103<1> 0, 0, -1
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 0, 1, 2
+0x103<1> 0, 0, -2
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 0, 1, 3
+0x103<1> 0, 0, -3
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 0, 1, 4
+0x103<1> 0, 0, -4
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 0, 1, 5
+0x103<1> 0, 0, -5
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 0, 1, 6
+0x103<1> 0, 0, -6
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103 0, 0
+stop
+
+slotB200:
+0x103 1, 1
+0x103<3> 1
+0x103<1> 1, 1, -4
+0x103<1> 1, 0, 4
+rest 0x30	// 1.0 beats
+0x103<1> 1, 1, -3
+0x103<1> 1, 0, 3
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 1, 1, -2
+0x103<1> 1, 0, 2
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 1, 1, -1
+0x103<1> 1, 0, 1
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 1, 1, 0
+0x103<1> 1, 0, 0
+rest 0x30	// 1.0 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 1
+rest 0x30	// 1.0 beats
+0x103<1> 1, 1, 1
+0x103<1> 1, 0, -1
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 1, 1, 2
+0x103<1> 1, 0, -2
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 1, 1, 3
+0x103<1> 1, 0, -3
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 1, 1, 4
+0x103<1> 1, 0, -4
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 1, 1, 5
+0x103<1> 1, 0, -5
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 1, 1, 6
+0x103<1> 1, 0, -6
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103 1, 0
+stop
+
+slotC200:
+0x103 2, 1
+0x103<3> 2
+0x103<1> 2, 1, -4
+0x103<1> 2, 0, 4
+rest 0x30	// 1.0 beats
+0x103<1> 2, 1, -3
+0x103<1> 2, 0, 3
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 2, 1, -2
+0x103<1> 2, 0, 2
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 2, 1, -1
+0x103<1> 2, 0, 1
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 2, 1, 0
+0x103<1> 2, 0, 0
+rest 0x30	// 1.0 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 2
+rest 0x30	// 1.0 beats
+0x103<1> 2, 1, 1
+0x103<1> 2, 0, -1
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 2, 1, 2
+0x103<1> 2, 0, -2
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 2, 1, 3
+0x103<1> 2, 0, -3
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 2, 1, 4
+0x103<1> 2, 0, -4
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 2, 1, 5
+0x103<1> 2, 0, -5
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 2, 1, 6
+0x103<1> 2, 0, -6
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103 2, 0
+stop
+
+slotD200:
+0x103 3, 1
+0x103<3> 3
+0x103<1> 3, 1, -4
+0x103<1> 3, 0, 4
+rest 0x30	// 1.0 beats
+0x103<1> 3, 1, -3
+0x103<1> 3, 0, 3
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 3, 1, -2
+0x103<1> 3, 0, 2
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 3, 1, -1
+0x103<1> 3, 0, 1
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 3, 1, 0
+0x103<1> 3, 0, 0
+rest 0x30	// 1.0 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 3
+rest 0x30	// 1.0 beats
+0x103<1> 3, 1, 1
+0x103<1> 3, 0, -1
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 3, 1, 2
+0x103<1> 3, 0, -2
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 3, 1, 3
+0x103<1> 3, 0, -3
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 3, 1, 4
+0x103<1> 3, 0, -4
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 3, 1, 5
+0x103<1> 3, 0, -5
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103<1> 3, 1, 6
+0x103<1> 3, 0, -6
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+0x103 3, 0
+stop
+
+
+// 1.0 beats, slots 1-4
+
+slotA100:
+0x103 0, 1
+0x103<3> 0
+0x103<1> 0, 1, -4
+0x103<1> 0, 0, 4
+rest 0x30	// 1.0 beats
+0x103<1> 0, 1, -3
+0x103<1> 0, 0, 3
+rest 0x30	// 1.0 beats
+0x103<1> 0, 1, -2
+0x103<1> 0, 0, 2
+rest 0x30	// 1.0 beats
+0x103<1> 0, 1, -1
+0x103<1> 0, 0, 1
+rest 0x30	// 1.0 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 0
+0x103<1> 0, 1, 0
+0x103<1> 0, 0, 0
+rest 0x30	// 1.0 beats
+0x103<1> 0, 1, 1
+0x103<1> 0, 0, -1
+rest 0x30	// 1.0 beats
+0x103<1> 0, 1, 2
+0x103<1> 0, 0, -2
+rest 0x30	// 1.0 beats
+0x103<1> 0, 1, 3
+0x103<1> 0, 0, -3
+rest 0x30	// 1.0 beats
+0x103<1> 0, 1, 4
+0x103<1> 0, 0, -4
+rest 0x30	// 1.0 beats
+0x103<1> 0, 1, 5
+0x103<1> 0, 0, -5
+rest 0x30	// 1.0 beats
+0x103<1> 0, 1, 6
+0x103<1> 0, 0, -6
+rest 0x30	// 1.0 beats
+0x103 0, 0
+stop
+
+slotB100:
+0x103 1, 1
+0x103<3> 1
+0x103<1> 1, 1, -4
+0x103<1> 1, 0, 4
+rest 0x30	// 1.0 beats
+0x103<1> 1, 1, -3
+0x103<1> 1, 0, 3
+rest 0x30	// 1.0 beats
+0x103<1> 1, 1, -2
+0x103<1> 1, 0, 2
+rest 0x30	// 1.0 beats
+0x103<1> 1, 1, -1
+0x103<1> 1, 0, 1
+rest 0x30	// 1.0 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 1
+0x103<1> 1, 1, 0
+0x103<1> 1, 0, 0
+rest 0x30	// 1.0 beats
+0x103<1> 1, 1, 1
+0x103<1> 1, 0, -1
+rest 0x30	// 1.0 beats
+0x103<1> 1, 1, 2
+0x103<1> 1, 0, -2
+rest 0x30	// 1.0 beats
+0x103<1> 1, 1, 3
+0x103<1> 1, 0, -3
+rest 0x30	// 1.0 beats
+0x103<1> 1, 1, 4
+0x103<1> 1, 0, -4
+rest 0x30	// 1.0 beats
+0x103<1> 1, 1, 5
+0x103<1> 1, 0, -5
+rest 0x30	// 1.0 beats
+0x103<1> 1, 1, 6
+0x103<1> 1, 0, -6
+rest 0x30	// 1.0 beats
+0x103 1, 0
+stop
+
+slotC100:
+0x103 2, 1
+0x103<3> 2
+0x103<1> 2, 1, -4
+0x103<1> 2, 0, 4
+rest 0x30	// 1.0 beats
+0x103<1> 2, 1, -3
+0x103<1> 2, 0, 3
+rest 0x30	// 1.0 beats
+0x103<1> 2, 1, -2
+0x103<1> 2, 0, 2
+rest 0x30	// 1.0 beats
+0x103<1> 2, 1, -1
+0x103<1> 2, 0, 1
+rest 0x30	// 1.0 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 2
+0x103<1> 2, 1, 0
+0x103<1> 2, 0, 0
+rest 0x30	// 1.0 beats
+0x103<1> 2, 1, 1
+0x103<1> 2, 0, -1
+rest 0x30	// 1.0 beats
+0x103<1> 2, 1, 2
+0x103<1> 2, 0, -2
+rest 0x30	// 1.0 beats
+0x103<1> 2, 1, 3
+0x103<1> 2, 0, -3
+rest 0x30	// 1.0 beats
+0x103<1> 2, 1, 4
+0x103<1> 2, 0, -4
+rest 0x30	// 1.0 beats
+0x103<1> 2, 1, 5
+0x103<1> 2, 0, -5
+rest 0x30	// 1.0 beats
+0x103<1> 2, 1, 6
+0x103<1> 2, 0, -6
+rest 0x30	// 1.0 beats
+0x103 2, 0
+stop
+
+slotD100:
+0x103 3, 1
+0x103<3> 3
+0x103<1> 3, 1, -4
+0x103<1> 3, 0, 4
+rest 0x30	// 1.0 beats
+0x103<1> 3, 1, -3
+0x103<1> 3, 0, 3
+rest 0x30	// 1.0 beats
+0x103<1> 3, 1, -2
+0x103<1> 3, 0, 2
+rest 0x30	// 1.0 beats
+0x103<1> 3, 1, -1
+0x103<1> 3, 0, 1
+rest 0x30	// 1.0 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 3
+0x103<1> 3, 1, 0
+0x103<1> 3, 0, 0
+rest 0x30	// 1.0 beats
+0x103<1> 3, 1, 1
+0x103<1> 3, 0, -1
+rest 0x30	// 1.0 beats
+0x103<1> 3, 1, 2
+0x103<1> 3, 0, -2
+rest 0x30	// 1.0 beats
+0x103<1> 3, 1, 3
+0x103<1> 3, 0, -3
+rest 0x30	// 1.0 beats
+0x103<1> 3, 1, 4
+0x103<1> 3, 0, -4
+rest 0x30	// 1.0 beats
+0x103<1> 3, 1, 5
+0x103<1> 3, 0, -5
+rest 0x30	// 1.0 beats
+0x103<1> 3, 1, 6
+0x103<1> 3, 0, -6
+rest 0x30	// 1.0 beats
+0x103 3, 0
+stop
+
+
+// 0.75 beats, slots 1-4
+
+slotA75:
+0x103 0, 1
+0x103<3> 0
+0x103<1> 0, 1, -4
+0x103<1> 0, 0, 4
+rest 0x30	// 1.0 beats
+0x103<1> 0, 1, -3
+0x103<1> 0, 0, 3
+rest 0x24	// 0.75 beats
+0x103<1> 0, 1, -2
+0x103<1> 0, 0, 2
+rest 0x24	// 0.75 beats
+0x103<1> 0, 1, -1
+0x103<1> 0, 0, 1
+rest 0x18	// 0.5 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 0
+rest 0xC	// 0.25 beats
+0x103<1> 0, 1, 0
+0x103<1> 0, 0, 0
+rest 0x24	// 0.75 beats
+0x103<1> 0, 1, 1
+0x103<1> 0, 0, -1
+rest 0x24	// 0.75 beats
+0x103<1> 0, 1, 2
+0x103<1> 0, 0, -2
+rest 0x24	// 0.75 beats
+0x103<1> 0, 1, 3
+0x103<1> 0, 0, -3
+rest 0x24	// 0.75 beats
+0x103<1> 0, 1, 4
+0x103<1> 0, 0, -4
+rest 0x24	// 0.75 beats
+0x103<1> 0, 1, 5
+0x103<1> 0, 0, -5
+rest 0x24	// 0.75 beats
+0x103<1> 0, 1, 6
+0x103<1> 0, 0, -6
+rest 0x24	// 0.75 beats
+0x103 0, 0
+stop
+
+slotB75:
+0x103 1, 1
+0x103<3> 1
+0x103<1> 1, 1, -4
+0x103<1> 1, 0, 4
+rest 0x30	// 1.0 beats
+0x103<1> 1, 1, -3
+0x103<1> 1, 0, 3
+rest 0x24	// 0.75 beats
+0x103<1> 1, 1, -2
+0x103<1> 1, 0, 2
+rest 0x24	// 0.75 beats
+0x103<1> 1, 1, -1
+0x103<1> 1, 0, 1
+rest 0x18	// 0.5 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 1
+rest 0xC	// 0.25 beats
+0x103<1> 1, 1, 0
+0x103<1> 1, 0, 0
+rest 0x24	// 0.75 beats
+0x103<1> 1, 1, 1
+0x103<1> 1, 0, -1
+rest 0x24	// 0.75 beats
+0x103<1> 1, 1, 2
+0x103<1> 1, 0, -2
+rest 0x24	// 0.75 beats
+0x103<1> 1, 1, 3
+0x103<1> 1, 0, -3
+rest 0x24	// 0.75 beats
+0x103<1> 1, 1, 4
+0x103<1> 1, 0, -4
+rest 0x24	// 0.75 beats
+0x103<1> 1, 1, 5
+0x103<1> 1, 0, -5
+rest 0x24	// 0.75 beats
+0x103<1> 1, 1, 6
+0x103<1> 1, 0, -6
+rest 0x24	// 0.75 beats
+0x103 1, 0
+stop
+
+slotC75:
+0x103 2, 1
+0x103<3> 2
+0x103<1> 2, 1, -4
+0x103<1> 2, 0, 4
+rest 0x30	// 1.0 beats
+0x103<1> 2, 1, -3
+0x103<1> 2, 0, 3
+rest 0x24	// 0.75 beats
+0x103<1> 2, 1, -2
+0x103<1> 2, 0, 2
+rest 0x24	// 0.75 beats
+0x103<1> 2, 1, -1
+0x103<1> 2, 0, 1
+rest 0x18	// 0.5 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 2
+rest 0xC	// 0.25 beats
+0x103<1> 2, 1, 0
+0x103<1> 2, 0, 0
+rest 0x24	// 0.75 beats
+0x103<1> 2, 1, 1
+0x103<1> 2, 0, -1
+rest 0x24	// 0.75 beats
+0x103<1> 2, 1, 2
+0x103<1> 2, 0, -2
+rest 0x24	// 0.75 beats
+0x103<1> 2, 1, 3
+0x103<1> 2, 0, -3
+rest 0x24	// 0.75 beats
+0x103<1> 2, 1, 4
+0x103<1> 2, 0, -4
+rest 0x24	// 0.75 beats
+0x103<1> 2, 1, 5
+0x103<1> 2, 0, -5
+rest 0x24	// 0.75 beats
+0x103<1> 2, 1, 6
+0x103<1> 2, 0, -6
+rest 0x24	// 0.75 beats
+0x103 2, 0
+stop
+
+slotD75:
+0x103 3, 1
+0x103<3> 3
+0x103<1> 3, 1, -4
+0x103<1> 3, 0, 4
+rest 0x30	// 1.0 beats
+0x103<1> 3, 1, -3
+0x103<1> 3, 0, 3
+rest 0x24	// 0.75 beats
+0x103<1> 3, 1, -2
+0x103<1> 3, 0, 2
+rest 0x24	// 0.75 beats
+0x103<1> 3, 1, -1
+0x103<1> 3, 0, 1
+rest 0x18	// 0.5 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 3
+rest 0xC	// 0.25 beats
+0x103<1> 3, 1, 0
+0x103<1> 3, 0, 0
+rest 0x24	// 0.75 beats
+0x103<1> 3, 1, 1
+0x103<1> 3, 0, -1
+rest 0x24	// 0.75 beats
+0x103<1> 3, 1, 2
+0x103<1> 3, 0, -2
+rest 0x24	// 0.75 beats
+0x103<1> 3, 1, 3
+0x103<1> 3, 0, -3
+rest 0x24	// 0.75 beats
+0x103<1> 3, 1, 4
+0x103<1> 3, 0, -4
+rest 0x24	// 0.75 beats
+0x103<1> 3, 1, 5
+0x103<1> 3, 0, -5
+rest 0x24	// 0.75 beats
+0x103<1> 3, 1, 6
+0x103<1> 3, 0, -6
+rest 0x24	// 0.75 beats
+0x103 3, 0
+stop
+
+
+// 0.67 beats, slots 1-4
+
+slotA67:
+0x103 0, 1
+0x103<3> 0
+0x103<1> 0, 1, -4
+0x103<1> 0, 0, 4
+rest 0x30	// 1.0 beats
+0x103<1> 0, 1, -3
+0x103<1> 0, 0, 3
+rest 0x20	// ~0.67 beats
+0x103<1> 0, 1, -2
+0x103<1> 0, 0, 2
+rest 0x20	// ~0.67 beats
+0x103<1> 0, 1, -1
+0x103<1> 0, 0, 1
+rest 0x10	// ~0.33 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 0
+rest 0x10	// ~0.33 beats
+0x103<1> 0, 1, 0
+0x103<1> 0, 0, 0
+rest 0x20	// ~0.67 beats
+0x103<1> 0, 1, 1
+0x103<1> 0, 0, -1
+rest 0x20	// ~0.67 beats
+0x103<1> 0, 1, 2
+0x103<1> 0, 0, -2
+rest 0x20	// ~0.67 beats
+0x103<1> 0, 1, 3
+0x103<1> 0, 0, -3
+rest 0x20	// ~0.67 beats
+0x103<1> 0, 1, 4
+0x103<1> 0, 0, -4
+rest 0x20	// ~0.67 beats
+0x103<1> 0, 1, 5
+0x103<1> 0, 0, -5
+rest 0x20	// ~0.67 beats
+0x103<1> 0, 1, 6
+0x103<1> 0, 0, -6
+rest 0x20	// ~0.67 beats
+0x103 0, 0
+stop
+
+slotB67:
+0x103 1, 1
+0x103<3> 1
+0x103<1> 1, 1, -4
+0x103<1> 1, 0, 4
+rest 0x30	// 1.0 beats
+0x103<1> 1, 1, -3
+0x103<1> 1, 0, 3
+rest 0x20	// ~0.67 beats
+0x103<1> 1, 1, -2
+0x103<1> 1, 0, 2
+rest 0x20	// ~0.67 beats
+0x103<1> 1, 1, -1
+0x103<1> 1, 0, 1
+rest 0x10	// ~0.33 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 1
+rest 0x10	// ~0.33 beats
+0x103<1> 1, 1, 0
+0x103<1> 1, 0, 0
+rest 0x20	// ~0.67 beats
+0x103<1> 1, 1, 1
+0x103<1> 1, 0, -1
+rest 0x20	// ~0.67 beats
+0x103<1> 1, 1, 2
+0x103<1> 1, 0, -2
+rest 0x20	// ~0.67 beats
+0x103<1> 1, 1, 3
+0x103<1> 1, 0, -3
+rest 0x20	// ~0.67 beats
+0x103<1> 1, 1, 4
+0x103<1> 1, 0, -4
+rest 0x20	// ~0.67 beats
+0x103<1> 1, 1, 5
+0x103<1> 1, 0, -5
+rest 0x20	// ~0.67 beats
+0x103<1> 1, 1, 6
+0x103<1> 1, 0, -6
+rest 0x20	// ~0.67 beats
+0x103 1, 0
+stop
+
+slotC67:
+0x103 2, 1
+0x103<3> 2
+0x103<1> 2, 1, -4
+0x103<1> 2, 0, 4
+rest 0x20	// ~0.67 beats
+0x103<1> 2, 1, -3
+0x103<1> 2, 0, 3
+rest 0x20	// ~0.67 beats
+0x103<1> 2, 1, -2
+0x103<1> 2, 0, 2
+rest 0x20	// ~0.67 beats
+0x103<1> 2, 1, -1
+0x103<1> 2, 0, 1
+rest 0x10	// ~0.33 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 2
+rest 0x10	// ~0.33 beats
+0x103<1> 2, 1, 0
+0x103<1> 2, 0, 0
+rest 0x20	// ~0.67 beats
+0x103<1> 2, 1, 1
+0x103<1> 2, 0, -1
+rest 0x20	// ~0.67 beats
+0x103<1> 2, 1, 2
+0x103<1> 2, 0, -2
+rest 0x20	// ~0.67 beats
+0x103<1> 2, 1, 3
+0x103<1> 2, 0, -3
+rest 0x20	// ~0.67 beats
+0x103<1> 2, 1, 4
+0x103<1> 2, 0, -4
+rest 0x20	// ~0.67 beats
+0x103<1> 2, 1, 5
+0x103<1> 2, 0, -5
+rest 0x20	// ~0.67 beats
+0x103<1> 2, 1, 6
+0x103<1> 2, 0, -6
+rest 0x20	// ~0.67 beats
+0x103 2, 0
+stop
+
+slotD67:
+0x103 3, 1
+0x103<3> 3
+0x103<1> 3, 1, -4
+0x103<1> 3, 0, 4
+rest 0x30	// 1.0 beats
+0x103<1> 3, 1, -3
+0x103<1> 3, 0, 3
+rest 0x20	// ~0.67 beats
+0x103<1> 3, 1, -2
+0x103<1> 3, 0, 2
+rest 0x20	// ~0.67 beats
+0x103<1> 3, 1, -1
+0x103<1> 3, 0, 1
+rest 0x10	// ~0.33 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 3
+rest 0x10	// ~0.33 beats
+0x103<1> 3, 1, 0
+0x103<1> 3, 0, 0
+rest 0x20	// ~0.67 beats
+0x103<1> 3, 1, 1
+0x103<1> 3, 0, -1
+rest 0x20	// ~0.67 beats
+0x103<1> 3, 1, 2
+0x103<1> 3, 0, -2
+rest 0x20	// ~0.67 beats
+0x103<1> 3, 1, 3
+0x103<1> 3, 0, -3
+rest 0x20	// ~0.67 beats
+0x103<1> 3, 1, 4
+0x103<1> 3, 0, -4
+rest 0x20	// ~0.67 beats
+0x103<1> 3, 1, 5
+0x103<1> 3, 0, -5
+rest 0x20	// ~0.67 beats
+0x103<1> 3, 1, 6
+0x103<1> 3, 0, -6
+rest 0x20	// ~0.67 beats
+0x103 3, 0
+stop
+
+
+// 0.5 beats, slots 1-4
+
+slotA50:
+0x103 0, 1
+0x103<3> 0
+0x103<1> 0, 1, -4
+0x103<1> 0, 0, 4
+rest 0x30	// 1.0 beats
+0x103<1> 0, 1, -3
+0x103<1> 0, 0, 3
+rest 0x18	// 0.5 beats
+0x103<1> 0, 1, -2
+0x103<1> 0, 0, 2
+rest 0x18	// 0.5 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 0
+0x103<1> 0, 1, -1
+0x103<1> 0, 0, 1
+rest 0x18	// 0.5 beats
+0x103<1> 0, 1, 0
+0x103<1> 0, 0, 0
+rest 0x18	// 0.5 beats
+0x103<1> 0, 1, 1
+0x103<1> 0, 0, -1
+rest 0x18	// 0.5 beats
+0x103<1> 0, 1, 2
+0x103<1> 0, 0, -2
+rest 0x18	// 0.5 beats
+0x103<1> 0, 1, 3
+0x103<1> 0, 0, -3
+rest 0x18	// 0.5 beats
+0x103<1> 0, 1, 4
+0x103<1> 0, 0, -4
+rest 0x18	// 0.5 beats
+0x103<1> 0, 1, 5
+0x103<1> 0, 0, -5
+rest 0x18	// 0.5 beats
+0x103<1> 0, 1, 6
+0x103<1> 0, 0, -6
+rest 0x18	// 0.5 beats
+0x103 0, 0
+stop 
+
+slotB50:
+0x103 1, 1
+0x103<3> 1
+0x103<1> 1, 1, -4
+0x103<1> 1, 0, 4
+rest 0x30	// 1.0 beats
+0x103<1> 1, 1, -3
+0x103<1> 1, 0, 3
+rest 0x18	// 0.5 beats
+0x103<1> 1, 1, -2
+0x103<1> 1, 0, 2
+rest 0x18	// 0.5 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 1
+0x103<1> 1, 1, -1
+0x103<1> 1, 0, 1
+rest 0x18	// 0.5 beats
+0x103<1> 1, 1, 0
+0x103<1> 1, 0, 0
+rest 0x18	// 0.5 beats
+0x103<1> 1, 1, 1
+0x103<1> 1, 0, -1
+rest 0x18	// 0.5 beats
+0x103<1> 1, 1, 2
+0x103<1> 1, 0, -2
+rest 0x18	// 0.5 beats
+0x103<1> 1, 1, 3
+0x103<1> 1, 0, -3
+rest 0x18	// 0.5 beats
+0x103<1> 1, 1, 4
+0x103<1> 1, 0, -4
+rest 0x18	// 0.5 beats
+0x103<1> 1, 1, 5
+0x103<1> 1, 0, -5
+rest 0x18	// 0.5 beats
+0x103<1> 1, 1, 6
+0x103<1> 1, 0, -6
+rest 0x18	// 0.5 beats
+0x103 1, 0
+stop 
+
+slotC50:
+0x103 2, 1
+0x103<3> 2
+0x103<1> 2, 1, -4
+0x103<1> 2, 0, 4
+rest 0x30	// 1.0 beats
+0x103<1> 2, 1, -3
+0x103<1> 2, 0, 3
+rest 0x18	// 0.5 beats
+0x103<1> 2, 1, -2
+0x103<1> 2, 0, 2
+rest 0x18	// 0.5 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 2
+0x103<1> 2, 1, -1
+0x103<1> 2, 0, 1
+rest 0x18	// 0.5 beats
+0x103<1> 2, 1, 0
+0x103<1> 2, 0, 0
+rest 0x18	// 0.5 beats
+0x103<1> 2, 1, 1
+0x103<1> 2, 0, -1
+rest 0x18	// 0.5 beats
+0x103<1> 2, 1, 2
+0x103<1> 2, 0, -2
+rest 0x18	// 0.5 beats
+0x103<1> 2, 1, 3
+0x103<1> 2, 0, -3
+rest 0x18	// 0.5 beats
+0x103<1> 2, 1, 4
+0x103<1> 2, 0, -4
+rest 0x18	// 0.5 beats
+0x103<1> 2, 1, 5
+0x103<1> 2, 0, -5
+rest 0x18	// 0.5 beats
+0x103<1> 2, 1, 6
+0x103<1> 2, 0, -6
+rest 0x18	// 0.5 beats
+0x103 2, 0
+stop 
+
+slotD50:
+0x103 3, 1
+0x103<3> 3
+0x103<1> 3, 1, -4
+0x103<1> 3, 0, 4
+rest 0x30	// 1.0 beats
+0x103<1> 3, 1, -3
+0x103<1> 3, 0, 3
+rest 0x18	// 0.5 beats
+0x103<2> 3
+0x103<1> 3, 1, -2
+0x103<1> 3, 0, 2
+rest 0x18	// 0.5 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 3
+0x103<1> 3, 1, -1
+0x103<1> 3, 0, 1
+rest 0x18	// 0.5 beats
+0x103<1> 3, 1, 0
+0x103<1> 3, 0, 0
+rest 0x18	// 0.5 beats
+0x103<1> 3, 1, 1
+0x103<1> 3, 0, -1
+rest 0x18	// 0.5 beats
+0x103<1> 3, 1, 2
+0x103<1> 3, 0, -2
+rest 0x18	// 0.5 beats
+0x103<1> 3, 1, 3
+0x103<1> 3, 0, -3
+rest 0x18	// 0.5 beats
+0x103<1> 3, 1, 4
+0x103<1> 3, 0, -4
+rest 0x18	// 0.5 beats
+0x103<1> 3, 1, 5
+0x103<1> 3, 0, -5
+rest 0x18	// 0.5 beats
+0x103<1> 3, 1, 6
+0x103<1> 3, 0, -6
+rest 0x18	// 0.5 beats
+0x103 3, 0
+stop 
+
+
+// 0.33 beats, slots 1-4
+
+slotA33:
+0x103 0, 1
+0x103<3> 0
+0x103<1> 0, 1, -4
+0x103<1> 0, 0, 4
+rest 0x30	// 1.0 beats
+0x103<1> 0, 1, -3
+0x103<1> 0, 0, 3
+rest 0x10	// 0.33 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 0
+0x103<1> 0, 1, -2
+0x103<1> 0, 0, 2
+rest 0x10	// 0.33 beats
+0x103<1> 0, 1, -1
+0x103<1> 0, 0, 1
+rest 0x10	// 0.33 beats
+0x103<1> 0, 1, 0
+0x103<1> 0, 0, 0
+rest 0x10	// 0.33 beats
+0x103<1> 0, 1, 1
+0x103<1> 0, 0, -1
+rest 0x10	// 0.33 beats
+0x103<1> 0, 1, 2
+0x103<1> 0, 0, -2
+rest 0x10	// 0.33 beats
+0x103<1> 0, 1, 3
+0x103<1> 0, 0, -3
+rest 0x10	// 0.33 beats
+0x103<1> 0, 1, 4
+0x103<1> 0, 0, -4
+rest 0x10	// 0.33 beats
+0x103<1> 0, 1, 5
+0x103<1> 0, 0, -5
+rest 0x10	// 0.33 beats
+0x103<1> 0, 1, 6
+0x103<1> 0, 0, -6
+rest 0x10	// 0.33 beats
+0x103 0, 0
+stop 
+
+slotB33:
+0x103 1, 1
+0x103<3> 1
+0x103<1> 1, 1, -4
+0x103<1> 1, 0, 4
+rest 0x30	// 1.0 beats
+0x103<1> 1, 1, -3
+0x103<1> 1, 0, 3
+rest 0x10	// 0.33 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 1
+0x103<1> 1, 1, -2
+0x103<1> 1, 0, 2
+rest 0x10	// 0.33 beats
+0x103<1> 1, 1, -1
+0x103<1> 1, 0, 1
+rest 0x10	// 0.33 beats
+0x103<1> 1, 1, 0
+0x103<1> 1, 0, 0
+rest 0x10	// 0.33 beats
+0x103<1> 1, 1, 1
+0x103<1> 1, 0, -1
+rest 0x10	// 0.33 beats
+0x103<1> 1, 1, 2
+0x103<1> 1, 0, -2
+rest 0x10	// 0.33 beats
+0x103<1> 1, 1, 3
+0x103<1> 1, 0, -3
+rest 0x10	// 0.33 beats
+0x103<1> 1, 1, 4
+0x103<1> 1, 0, -4
+rest 0x10	// 0.33 beats
+0x103<1> 1, 1, 5
+0x103<1> 1, 0, -5
+rest 0x10	// 0.33 beats
+0x103<1> 1, 1, 6
+0x103<1> 1, 0, -6
+rest 0x10	// 0.33 beats
+0x103 1, 0
+stop 
+
+slotC33:
+0x103 2, 1
+0x103<3> 2
+0x103<1> 2, 1, -4
+0x103<1> 2, 0, 4
+rest 0x30	// 1.0 beats
+0x103<1> 2, 1, -3
+0x103<1> 2, 0, 3
+rest 0x10	// 0.33 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 2
+0x103<1> 2, 1, -2
+0x103<1> 2, 0, 2
+rest 0x10	// 0.33 beats
+0x103<1> 2, 1, -1
+0x103<1> 2, 0, 1
+rest 0x10	// 0.33 beats
+0x103<1> 2, 1, 0
+0x103<1> 2, 0, 0
+rest 0x10	// 0.33 beats
+0x103<1> 2, 1, 1
+0x103<1> 2, 0, -1
+rest 0x10	// 0.33 beats
+0x103<1> 2, 1, 2
+0x103<1> 2, 0, -2
+rest 0x10	// 0.33 beats
+0x103<1> 2, 1, 3
+0x103<1> 2, 0, -3
+rest 0x10	// 0.33 beats
+0x103<1> 2, 1, 4
+0x103<1> 2, 0, -4
+rest 0x10	// 0.33 beats
+0x103<1> 2, 1, 5
+0x103<1> 2, 0, -5
+rest 0x10	// 0.33 beats
+0x103<1> 2, 1, 6
+0x103<1> 2, 0, -6
+rest 0x10	// 0.33 beats
+0x103 2, 0
+stop 
+
+slotD33:
+0x103 3, 1
+0x103<3> 3
+0x103<1> 3, 1, -4
+0x103<1> 3, 0, 4
+rest 0x30	// 1.0 beats
+0x103<1> 3, 1, -3
+0x103<1> 3, 0, 3
+rest 0x10	// 0.33 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 3
+0x103<1> 3, 1, -2
+0x103<1> 3, 0, 2
+rest 0x10	// 0.33 beats
+0x103<1> 3, 1, -1
+0x103<1> 3, 0, 1
+rest 0x10	// 0.33 beats
+0x103<1> 3, 1, 0
+0x103<1> 3, 0, 0
+rest 0x10	// 0.33 beats
+0x103<1> 3, 1, 1
+0x103<1> 3, 0, -1
+rest 0x10	// 0.33 beats
+0x103<1> 3, 1, 2
+0x103<1> 3, 0, -2
+rest 0x10	// 0.33 beats
+0x103<1> 3, 1, 3
+0x103<1> 3, 0, -3
+rest 0x10	// 0.33 beats
+0x103<1> 3, 1, 4
+0x103<1> 3, 0, -4
+rest 0x10	// 0.33 beats
+0x103<1> 3, 1, 5
+0x103<1> 3, 0, -5
+rest 0x10	// 0.33 beats
+0x103<1> 3, 1, 6
+0x103<1> 3, 0, -6
+rest 0x10	// 0.33 beats
+0x103 3, 0
+stop 
+
+
+// 0.25 beats, slots 1-4
+
+slotA25:
+0x103 0, 1
+0x103<3> 0
+0x103<1> 0, 1, -4
+0x103<1> 0, 0, 4
+rest 0x30	// 1.0 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 0
+0x103<1> 0, 1, -3
+0x103<1> 0, 0, 3
+rest 0xC	// 0.25 beats
+0x103<1> 0, 1, -2
+0x103<1> 0, 0, 2
+rest 0xC	// 0.25 beats
+0x103<1> 0, 1, -1
+0x103<1> 0, 0, 1
+rest 0xC	// 0.25 beats
+0x103<1> 0, 1, 0
+0x103<1> 0, 0, 0
+rest 0xC	// 0.25 beats
+0x103<1> 0, 1, 1
+0x103<1> 0, 0, -1
+rest 0xC	// 0.25 beats
+0x103<1> 0, 1, 2
+0x103<1> 0, 0, -2
+rest 0xC	// 0.25 beats
+0x103<1> 0, 1, 3
+0x103<1> 0, 0, -3
+rest 0xC	// 0.25 beats
+0x103<1> 0, 1, 4
+0x103<1> 0, 0, -4
+rest 0xC	// 0.25 beats
+0x103<1> 0, 1, 5
+0x103<1> 0, 0, -5
+rest 0xC	// 0.25 beats
+0x103<1> 0, 1, 6
+0x103<1> 0, 0, -6
+rest 0xC	// 0.25 beats
+0x103 0, 0
+stop 
+
+slotB25:
+0x103 1, 1
+0x103<3> 1
+0x103<1> 1, 1, -4
+0x103<1> 1, 0, 4
+rest 0x30	// 1.0 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 1
+0x103<1> 1, 1, -3
+0x103<1> 1, 0, 3
+rest 0xC	// 0.25 beats
+0x103<1> 1, 1, -2
+0x103<1> 1, 0, 2
+rest 0xC	// 0.25 beats
+0x103<1> 1, 1, -1
+0x103<1> 1, 0, 1
+rest 0xC	// 0.25 beats
+0x103<1> 1, 1, 0
+0x103<1> 1, 0, 0
+rest 0xC	// 0.25 beats
+0x103<1> 1, 1, 1
+0x103<1> 1, 0, -1
+rest 0xC	// 0.25 beats
+0x103<1> 1, 1, 2
+0x103<1> 1, 0, -2
+rest 0xC	// 0.25 beats
+0x103<1> 1, 1, 3
+0x103<1> 1, 0, -3
+rest 0xC	// 0.25 beats
+0x103<1> 1, 1, 4
+0x103<1> 1, 0, -4
+rest 0xC	// 0.25 beats
+0x103<1> 1, 1, 5
+0x103<1> 1, 0, -5
+rest 0xC	// 0.25 beats
+0x103<1> 1, 1, 6
+0x103<1> 1, 0, -6
+rest 0xC	// 0.25 beats
+0x103 1, 0
+stop 
+
+slotC25:
+0x103 2, 1
+0x103<3> 2
+0x103<1> 2, 1, -4
+0x103<1> 2, 0, 4
+rest 0x30	// 1.0 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 2
+0x103<1> 2, 1, -3
+0x103<1> 2, 0, 3
+rest 0xC	// 0.25 beats
+0x103<1> 2, 1, -2
+0x103<1> 2, 0, 2
+rest 0xC	// 0.25 beats
+0x103<1> 2, 1, -1
+0x103<1> 2, 0, 1
+rest 0xC	// 0.25 beats
+0x103<1> 2, 1, 0
+0x103<1> 2, 0, 0
+rest 0xC	// 0.25 beats
+0x103<1> 2, 1, 1
+0x103<1> 2, 0, -1
+rest 0xC	// 0.25 beats
+0x103<1> 2, 1, 2
+0x103<1> 2, 0, -2
+rest 0xC	// 0.25 beats
+0x103<1> 2, 1, 3
+0x103<1> 2, 0, -3
+rest 0xC	// 0.25 beats
+0x103<1> 2, 1, 4
+0x103<1> 2, 0, -4
+rest 0xC	// 0.25 beats
+0x103<1> 2, 1, 5
+0x103<1> 2, 0, -5
+rest 0xC	// 0.25 beats
+0x103<1> 2, 1, 6
+0x103<1> 2, 0, -6
+rest 0xC	// 0.25 beats
+0x103 2, 0
+stop 
+
+slotD25:
+0x103 3, 1
+0x103<3> 3
+0x103<1> 3, 1, -4
+0x103<1> 3, 0, 4
+rest 0x30	// 1.0 beats
+async_call charge
+0x102 -1, 2, 0, 1, 0
+0x103<2> 3
+0x103<1> 3, 1, -3
+0x103<1> 3, 0, 3
+rest 0xC	// 0.25 beats
+0x103<1> 3, 1, -2
+0x103<1> 3, 0, 2
+rest 0xC	// 0.25 beats
+0x103<1> 3, 1, -1
+0x103<1> 3, 0, 1
+rest 0xC	// 0.25 beats
+0x103<1> 3, 1, 0
+0x103<1> 3, 0, 0
+rest 0xC	// 0.25 beats
+0x103<1> 3, 1, 1
+0x103<1> 3, 0, -1
+rest 0xC	// 0.25 beats
+0x103<1> 3, 1, 2
+0x103<1> 3, 0, -2
+rest 0xC	// 0.25 beats
+0x103<1> 3, 1, 3
+0x103<1> 3, 0, -3
+rest 0xC	// 0.25 beats
+0x103<1> 3, 1, 4
+0x103<1> 3, 0, -4
+rest 0xC	// 0.25 beats
+0x103<1> 3, 1, 5
+0x103<1> 3, 0, -5
+rest 0xC	// 0.25 beats
+0x103<1> 3, 1, 6
+0x103<1> 3, 0, -6
+rest 0xC	// 0.25 beats
+0x103 3, 0
+stop 
+
+
+// Please use the subs below as it autopicks the widgets at a certain slot.
+
+widget200:
+0x103<4> 
+switch 
+	case 0
+		async_call slotB200
+		break 
+	case 1
+		async_call slotC200
+		break 
+	case 2
+		async_call slotD200
+		break 
+	case 3
+		async_call slotA200
+		break 
+endswitch 
+stop
+
+widget100:
+0x103<4> 
+switch 
+	case 0
+		async_call slotB100
+		break 
+	case 1
+		async_call slotC100
+		break 
+	case 2
+		async_call slotD100
+		break 
+	case 3
+		async_call slotA100
+		break 
+endswitch 
+stop
+
+widget75:
+0x103<4> 
+switch 
+	case 0
+		async_call slotB75
+		break 
+	case 1
+		async_call slotC75
+		break 
+	case 2
+		async_call slotD75
+		break 
+	case 3
+		async_call slotA75
+		break 
+endswitch 
+stop
+
+widget67:
+0x103<4> 
+switch 
+	case 0
+		async_call slotB67
+		break 
+	case 1
+		async_call slotC67
+		break 
+	case 2
+		async_call slotD67
+		break 
+	case 3
+		async_call slotA67
+		break 
+endswitch 
+stop
+
+widget50:
+0x103<4> 
+switch 
+	case 0
+		async_call slotB50
+		break 
+	case 1
+		async_call slotC50
+		break 
+	case 2
+		async_call slotD50
+		break 
+	case 3
+		async_call slotA50
+		break 
+endswitch 
+stop
+
+widget33:
+0x103<4> 
+switch 
+	case 0
+		async_call slotB33
+		break 
+	case 1
+		async_call slotC33
+		break 
+	case 2
+		async_call slotD33
+		break 
+	case 3
+		async_call slotA33
+		break 
+endswitch 
+stop
+
+widget25:
+0x103<4> 
+switch 
+	case 0
+		async_call slotB25
+		break 
+	case 1
+		async_call slotC25
+		break 
+	case 2
+		async_call slotD25
+		break 
+	case 3
+		async_call slotA25
+		break 
+endswitch 
+stop
+
+
+// The charge sub. Please use them too, as it's crucial.
+
+charge:
+rest 0xC	// 0.25 beats
+0x101<2> 2
+rest 0x24	// 0.75 beats
+0x101<3> 2
+stop
+

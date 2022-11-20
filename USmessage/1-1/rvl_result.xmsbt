@@ -1,0 +1,25 @@
+<xmsbt><entry label="rvl_assemble_L_cp_DEF_Ng">
+		<text>You're not quite there yet.</text>
+	</entry>
+	<entry label="rvl_assemble_L_cp_FINISH_Ng">
+		<text>Don't focus too much on the visuals.</text>
+	</entry>
+	<entry label="rvl_assemble_L_caption">
+		<text>Built to Scale Results</text>
+	</entry>
+	<entry label="rvl_assemble_L_Ng">
+		<text>Looks like you had a rough day...</text>
+	</entry>
+	<entry label="rvl_assemble_L_cp_DEF_Hi">
+		<text>Basics: Mastered!</text>
+	</entry>
+	<entry label="rvl_assemble_L_cp_FINISH_Hi">
+		<text>You did great in the dark!</text>
+	</entry>
+	<entry label="rvl_assemble_L_Hi">
+		<text>Looking good!</text>
+	</entry>
+	<entry label="rvl_assemble_L_Ok">
+		<text>Sometimes, being OK is good enough.</text>
+	</entry>
+	</xmsbt>

@@ -1,0 +1,15 @@
+<xmsbt><entry label="item_rvlAssembleL_name">
+		<text>The Rod</text>
+	</entry>
+	<entry label="item_rvlAssembleL_title">
+		<text>Marketing decisions...</text>
+	</entry>
+	<entry label="item_rvlAssembleL_explain">
+		<text>With this new white design, 
+the Widgets(tm) will now sell 
+100% more, or at least this is 
+what our boss says,but looking 
+at them, I still wonder if my idea 
+of a blue model would have sold better.</text>
+	</entry>
+	</xmsbt>

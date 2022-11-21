@@ -1,0 +1,25 @@
+<xmsbt><entry label="ntr_boxShow_L_cp_DEF_Hi">
+		<text>Nice breaks!</text>
+	</entry>
+	<entry label="ntr_boxShow_L_cp_SPECIAL_Hi">
+		<text>Super scratch-o!</text>
+	</entry>
+	<entry label="ntr_boxShow_L_Ng">
+		<text>You could use another session.</text>
+	</entry>
+	<entry label="ntr_boxShow_L_cp_DEF_Ng">
+		<text>I don't know about those breaks...</text>
+	</entry>
+	<entry label="ntr_boxShow_L_cp_SPECIAL_Ng">
+		<text>Scratch-o...huh?</text>
+	</entry>
+	<entry label="ntr_boxShow_L_Hi">
+		<text>Lookin' like a real DJ!</text>
+	</entry>
+	<entry label="ntr_boxShow_L_Ok">
+		<text>Yeah, not too shabby, hey!</text>
+	</entry>
+	<entry label="ntr_boxShow_L_caption">
+		<text>DJ Yellow says...</text>
+	</entry>
+	</xmsbt>

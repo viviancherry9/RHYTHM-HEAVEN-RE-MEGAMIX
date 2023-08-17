@@ -424,7 +424,7 @@ assets:
 0x93 7, 0xC, "agb_rap_STAR_Hi", "agb_rap_STAR_Ng"
 0x94 0, "result_common_Hi", "result_common_Ok", "result_common_Ng"
 0x95 0xC, "agb_rap_caption"
-0x98 1, 1
+0x98 1, 2
 0x88 
 // 0xC = agb_result
 // 0xF = ctr_result
@@ -839,8 +839,13 @@ rest 0x30
 rest 0xC0
 // @ 96 Beats
 call kimitteSaiko
+star 0x150
+0x8F 7
+async_sub 0x52, 0xF0, 0
+async_sub 0x4B, 0x270, 0
 call beat4
 call kimitteSaiko
+0x8E 0
 call beat4
 call oyatsugaNaiyo
 call orenoseiKamone

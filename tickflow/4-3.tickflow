@@ -530,7 +530,7 @@ assets:
 0x93 7, 0xE, "rvl_badminton_L_cp_STAR_Hi", "rvl_badminton_L_cp_STAR_Ng"
 0x94 0, "result_common_Hi", "result_common_Ok", "result_common_Ng"
 0x95 0xE, "rvl_badminton_L_caption"
-0x98 1, 2
+0x98 1, 1
 0x88 
 if 1
 	0x88<1> 
@@ -553,7 +553,7 @@ else
 	if 1
 		0xAC 0
 	else 
-		0xAD 1
+		0xAD 0
 	endif 
 endif 
 stop 
@@ -910,10 +910,13 @@ async_call sub5E
 rest 0x60	// 4.0 beats
 rest 0x60
 
+star 0x120
 async_call sub5F
 rest 0xC0	// 4.0 beats
+0x8F 7
 async_call sub61
 rest 0xC0	// 4.0 beats
+0x8F 0
 // third half of the song omgg
 
 

@@ -530,7 +530,7 @@ assets:
 0x93 7, 0xF, "ctr_sumou_L_cp_STAR_Hi", "ctr_sumou_L_cp_STAR_Ng"
 0x94 0, "result_common_Hi", "result_common_Ok", "result_common_Ng"
 0x95 0xE, "RD_SVT_S_caption"
-0x98 1, 1
+0x98 1, 2
 0x88 
 if 1
 	0x88<1> 
@@ -1273,7 +1273,9 @@ rest 0x30
 async_call shortsvtcole
 async_call shake
 rest 0x30
-
+star 0x108
+async_sub 0x52, 0xF0, 0
+async_sub 0x4B, 0x270, 0
 async_call shortsvtcole
 async_call shake
 rest 0x30
@@ -1286,12 +1288,14 @@ rest 0x30
 async_call shortsvtcole
 async_call shake
 rest 0x30
+0x8F 7
 async_call shortsvtcole
 async_call shake
 rest 0x30
 async_call shortsvtcole
 async_call shake
 rest 0x30
+0x8F 0
 ///last tempo change
 0x107<1> 0
 0x7C<1> 7, 1, 1

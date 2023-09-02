@@ -1,0 +1,885 @@
+// Decompiled using Tickompiler v1.9.1
+// https://github.com/rhmodding/Tickompiler
+#index 0x1D
+start:
+0x2D 0
+0xA6 0
+0xA4 0x1D
+0x75<1> 
+if 0
+	0xA5 1
+	0xA4<2> 1
+	async_call loc0
+else 
+	0xA6<1> 1
+	0x75 0
+endif 
+set_cat 0
+0x21 0x78
+speed 0x100
+input 0
+0x7C<3> 1
+if 0
+	0x7C 1, 0, 0x18
+endif 
+0x7C<3> 2
+if 0
+	0x7C 2, 0, 0x18
+endif 
+rest 0x18	// 0.5 beats
+game_model 0x32, 0
+game_cellanim 0x32, 2
+game_effect 0x32, 2
+game_layout 0x32, 4
+sub 5
+call loc1
+0xA8<1> 0x1D
+0xA8<4> 0x1D
+sub 8
+sub 6
+0x2B 0x32, 2
+play_sfx 0x1000294
+0x88<7> 
+if 1
+	play_sfx 0x1000292
+endif 
+engine 0x32
+sub 0xA
+async_call sub68
+0x2D 1
+0x7C<1> 7, 0, 0x30
+0x88 
+if 1
+	0x8A<3> 0
+endif 
+stop 
+loc0:
+set_cat 0
+0x21 0x78
+speed 0x100
+0x7C<3> 1
+if 0
+	0x7C 1, 0, 0x18
+endif 
+0x7C<3> 2
+if 0
+	0x7C 2, 0, 0x18
+endif 
+rest 0xC	// 0.25 beats
+engine 0x49
+rest 0x18	// 0.5 beats
+sub 4
+0x81 
+if 1
+	0x84<1> 
+	label 0x300
+	rest 0xC	// 0.25 beats
+	0x81 
+	if 1
+		0x84<2> 0
+		if 0
+			goto 0x300
+		endif 
+	endif 
+endif 
+0xA4<2> 0
+rest 0x18	// 0.5 beats
+0x81 
+if 1
+	0x82 0x3E8
+	rest 0xC	// 0.25 beats
+	label 0x3DB
+	0x81 
+	if 1
+		0x82<1> 
+		if 0
+			rest 1	// 0.020833334 beats
+			goto 0x3DB
+		endif 
+	endif 
+	rest_reset 
+endif 
+label 0xC8
+0x103 
+if 0
+	rest 6	// 0.125 beats
+	goto 0xC8
+endif 
+0x7C<1> 7, 1, 0
+fade<1> 7, 1, 0
+0x76 7, 0
+0x100 
+rest 0x18	// 0.5 beats
+0x88 
+if 0
+	0xAB<4> 
+	if 1
+		0xAB<1> 
+	endif 
+endif 
+0x102 
+label 0xC7
+0xA7 
+if 1
+	goto 0xC5
+endif 
+rest 0x18	// 0.5 beats
+0x102<1> 0x18
+0x101 
+switch 
+	case 0x3E
+		0x102<2> 
+		if_geq 0x2B8
+			goto 0xC6
+		endif 
+		break 
+	case 0x3D
+		0x102<2> 
+		if_geq 0x228
+			goto 0xC6
+		endif 
+		break 
+	case 0x42
+		0x102<2> 
+		if_geq 0x258
+			goto 0xC6
+		endif 
+		break 
+	case 0x43
+		0x102<2> 
+		if_geq 0x1F8
+			goto 0xC6
+		endif 
+		break 
+	case 0x39
+		0x102<2> 
+		if_geq 0x1C8
+			goto 0xC6
+		endif 
+		break 
+	case 0x44
+		0x102<2> 
+		if_geq 0x288
+			goto 0xC6
+		endif 
+		break 
+	case 0x3F
+		0x102<2> 
+		if_geq 0x228
+			goto 0xC6
+		endif 
+		break 
+	case 0x3C
+		0x102<2> 
+		if_geq 0x228
+			goto 0xC6
+		endif 
+		break 
+	case 0x3A
+		0x102<2> 
+		if_geq 0x258
+			goto 0xC6
+		endif 
+		break 
+	case 0x3B
+		0x102<2> 
+		if_geq 0x258
+			goto 0xC6
+		endif 
+		break 
+	case 0x47
+		0x102<2> 
+		if_geq 0x228
+			goto 0xC6
+		endif 
+		break 
+	case 0x4F
+		0x102<2> 
+		if_geq 0x228
+			goto 0xC6
+		endif 
+		break 
+	case 0x4E
+		0x102<2> 
+		if_geq 0x228
+			goto 0xC6
+		endif 
+		break 
+	case 0x4D
+		0x102<2> 
+		if_geq 0x228
+			goto 0xC6
+		endif 
+		break 
+	case 0x46
+		0x102<2> 
+		if_geq 0x228
+			goto 0xC6
+		endif 
+		break 
+	case 0x4A
+		0x102<2> 
+		if_geq 0x258
+			goto 0xC6
+		endif 
+		break 
+	case 0x50
+		0x102<2> 
+		if_geq 0x258
+			goto 0xC6
+		endif 
+		break 
+	case 0x45
+		0x102<2> 
+		if_geq 0x228
+			goto 0xC6
+		endif 
+		break 
+	case 0x4C
+		0x102<2> 
+		if_geq 0x288
+			goto 0xC6
+		endif 
+		break 
+	case 0x4B
+		0x102<2> 
+		if_geq 0x258
+			goto 0xC6
+		endif 
+		break 
+	case 0x48
+		0x102<2> 
+		if_geq 0x2B8
+			goto 0xC6
+		endif 
+		break 
+	case 0x2C
+		0x102<2> 
+		if_geq 0x2E8
+			goto 0xC6
+		endif 
+		break 
+	case 0x37
+		0x102<2> 
+		if_geq 0x2E8
+			goto 0xC6
+		endif 
+		break 
+	case 0x35
+		0x102<2> 
+		if_geq 0x378
+			goto 0xC6
+		endif 
+		break 
+	case 0x38
+		0x102<2> 
+		if_geq 0x2E8
+			goto 0xC6
+		endif 
+		break 
+	case 0x2A
+		0x102<2> 
+		if_geq 0x318
+			goto 0xC6
+		endif 
+		break 
+	case 0x29
+		0x102<2> 
+		if_geq 0x258
+			goto 0xC6
+		endif 
+		break 
+	case 0x2D
+		0x102<2> 
+		if_geq 0x348
+			goto 0xC6
+		endif 
+		break 
+	case 0x33
+		0x102<2> 
+		if_geq 0x258
+			goto 0xC6
+		endif 
+		break 
+	case 0x31
+		0x102<2> 
+		if_geq 0x2E8
+			goto 0xC6
+		endif 
+		break 
+	case 0x32
+		0x102<2> 
+		if_geq 0x2E8
+			goto 0xC6
+		endif 
+		break 
+	case 0x34
+		0x102<2> 
+		if_geq 0x3A8
+			goto 0xC6
+		endif 
+		break 
+	case 0x2E
+		0x102<2> 
+		if_geq 0x288
+			goto 0xC6
+		endif 
+		break 
+	case 0x2B
+		0x102<2> 
+		if_geq 0x2B8
+			goto 0xC6
+		endif 
+		break 
+	case 0x2F
+		0x102<2> 
+		if_geq 0x348
+			goto 0xC6
+		endif 
+		break 
+	case 0x36
+		0x102<2> 
+		if_geq 0x2E8
+			goto 0xC6
+		endif 
+		break 
+	case 0x41
+		0x102<2> 
+		if_geq 0x228
+			goto 0xC6
+		endif 
+		break 
+	case 0x40
+		0x102<2> 
+		if_geq 0x228
+			goto 0xC6
+		endif 
+		break 
+	case 0x49
+		0x102<2> 
+		if_geq 0x228
+			goto 0xC6
+		endif 
+		break 
+	case 0x30
+		0x102<2> 
+		if_geq 0x228
+			goto 0xC6
+		endif 
+		break 
+	case 0xFF
+		0x102<2> 
+		if_geq 0x2B8
+			goto 0xC6
+		endif 
+		break 
+	default 
+		0x102<2> 
+		if_geq 0x240
+			goto 0xC6
+		endif 
+		break 
+endswitch 
+goto 0xC7
+label 0xC6
+0xA7<3> 
+if 0
+	0xA6<1> 0
+endif 
+label 0xC5
+debug "TICKFLOW >>> 0000\n"
+0x7C 7, 1, 0
+debug "TICKFLOW >>> 0001\n"
+0x100<1> 
+rest 0x18	// 0.5 beats
+debug "TICKFLOW >>> 0002\n"
+0xA5 0
+0x81 
+if 1
+	0x8C<1> 1
+endif 
+debug "TICKFLOW >>> 0003\n"
+stop 
+loc1:
+set_cellanim 2, u"rom:/cellanim/rvlSort_bread.zlib", -1
+0x83<1> 
+0xBB 
+if 0
+	0xBC 
+endif 
+sub 7
+0xBD 
+0x8C<2> 3
+0x61<2> u"ntr_air_board"
+0x81 
+if 0
+	0x86 
+	if 0
+		0x61<3> 0
+		rest 0xC	// 0.25 beats
+		sub 3
+	endif 
+else 
+	0x8C<3> 
+	0x86 
+	if 0
+		0x61<3> 0
+		rest 0xC	// 0.25 beats
+		sub 3
+		0x81<1> 
+		if 1
+			0x87<1> 0, 0
+			rest 0xC	// 0.25 beats
+			label 0x4D2
+			0x81 
+			if 1
+				0x87<3> 0
+				if 0
+					rest 1	// 0.020833334 beats
+					goto 0x4D2
+				endif 
+			endif 
+		endif 
+	else 
+		0x87<2> 0
+		rest 0xC	// 0.25 beats
+		label 0x10E1
+		0x81 
+		if 1
+			0x87<3> 0
+			if 0
+				rest 1	// 0.020833334 beats
+				goto 0x10E1
+			endif 
+		endif 
+		0x61<1> 0, 0
+	endif 
+endif 
+rest 0xC	// 0.25 beats
+0x5D<2> u"GROUP_SHIWAKE"
+0x81 
+if 0
+	0x86 
+	if 0
+		0x5D<3> 2
+		rest 0xC	// 0.25 beats
+		sub 3
+	endif 
+else 
+	0x8C<3> 
+	0x86 
+	if 0
+		0x5D<3> 2
+		rest 0xC	// 0.25 beats
+		sub 3
+		0x81<1> 
+		if 1
+			0x87 2, 2
+			rest 0xC	// 0.25 beats
+			label 0x929
+			0x81 
+			if 1
+				0x87<3> 2
+				if 0
+					rest 1	// 0.020833334 beats
+					goto 0x929
+				endif 
+			endif 
+		endif 
+	else 
+		0x87<2> 2
+		rest 0xC	// 0.25 beats
+		label 0x1538
+		0x81 
+		if 1
+			0x87<3> 2
+			if 0
+				rest 1	// 0.020833334 beats
+				goto 0x1538
+			endif 
+		endif 
+		set_sfx<1> 2, 2
+	endif 
+endif 
+rest 0xC	// 0.25 beats
+rest 0xC	// 0.25 beats
+sub 3
+0x83 0
+label 0xC8
+cellanim_busy 2
+if 0
+	goto 0xC9
+endif 
+rest 1	// 0.020833334 beats
+goto 0xC8
+label 0xC9
+return 
+sub56:
+0x107 1, 0
+rest 0x60	// 2.0 beats
+0x107 0, 0
+stop 
+sub58:
+0x105 
+0x100 0
+stop 
+sub59:
+0x105 
+0x100 1
+stop 
+sub5B:
+0x105 
+0x8E 0
+0x100 0
+rest 0x60	// 2.0 beats
+0x100 1
+rest 0x60	// 2.0 beats
+stop 
+sub5E:
+0x105 
+0x8E 0
+0x100 2
+rest 0xC0	// 4.0 beats
+stop 
+sub5F:
+async_call sub56
+play_sfx 0x100049A
+0x105 
+0x105<1> 
+0x8E 1
+0x100 0
+rest 0x30	// 1.0 beats
+rest 0x18	// 0.5 beats
+0x100 1
+rest 0x30	// 1.0 beats
+0x100 1
+rest 0x30	// 1.0 beats
+rest 0x18	// 0.5 beats
+stop 
+sub62:
+0x101<1> 1
+rest 0xC0	// 4.0 beats
+stop 
+sub63:
+0x101<1> 2
+rest 0xC0	// 4.0 beats
+stop 
+sub64:
+0x101<1> 0
+rest 0x60	// 2.0 beats
+0x101<1> 1
+rest 0x60	// 2.0 beats
+stop 
+sub65:
+0x101<1> 0
+rest 0x30	// 1.0 beats
+rest 0x18	// 0.5 beats
+0x101<1> 1
+rest 0x30	// 1.0 beats
+0x101<1> 1
+rest 0x30	// 1.0 beats
+rest 0x18	// 0.5 beats
+stop 
+assets:
+0x92 0, 0x23
+0x93 0, 0xE, "rvl_sort_L_cp_DEF_Hi", "rvl_sort_L_cp_DEF_Ng"
+0x94 0, "result_common_Hi", "result_common_Ok", "result_common_Ng"
+0x95 0xE, "rvl_sort_L_caption"
+0x92 1, 0x37
+0x93 1, 0xE, "rvl_sort_L_cp_DOUBLE_Hi", "rvl_sort_L_cp_DOUBLE_Ng"
+0x94 0, "result_common_Hi", "result_common_Ok", "result_common_Ng"
+0x95 0xE, "rvl_sort_L_caption"
+0x92 7, 0xA
+0x93 7, 0xE, "rvl_sort_L_cp_STAR_Hi", "rvl_sort_L_cp_STAR_Ng"
+0x94 0, "result_common_Hi", "result_common_Ok", "result_common_Ng"
+0x95 0xE, "rvl_sort_L_caption"
+0x98 1, 1
+0x88 
+if 1
+	0x88<1> 
+	if 1
+		0x88<2> 
+		switch 
+			case 1
+				0x8A<4> 1, 1
+				break 
+			case 2
+				0x8A<4> 1, 2
+				break 
+			case 3
+				0x8A<4> 1, 3
+				break 
+		endswitch 
+	endif 
+else 
+	0xAB<3> 1
+	if 1
+		0xAC 0
+	else 
+		0xAD 0
+	endif 
+endif 
+stop 
+
+kitchenPattern:
+	0x8E 0
+	0x105<0>
+	0x100 0
+	rest 0x60
+	rest 0x18
+	0x105<0>
+	0x100 1
+stop
+
+kitchenPatternBG:
+	0x101<1> 0
+	rest 0x60
+	rest 0x18
+	0x101<1> 1
+stop
+
+ding:
+	async_sub 0x60, -0xA8
+	rest 0x18
+	async_sub 0x5D
+stop
+
+sub68:
+set_cat 0
+rest 1
+0x70<1> 0x69
+0x6F<1> 
+0xA7<2> 
+// 0x7C<2> 7
+async_call assets
+0x106 1
+0x102<1> 
+0x104 
+0xB7 
+if 0
+	0x53 0x1000124
+	0x23 0x1000124
+else 
+	0x4F 0x100006A
+	0x23 0x100006A
+endif 
+speed 0x100
+rest 0x60	// 2.0 beats
+0xBA 
+0xB7 
+if 0
+	sub 2
+	0x88 
+	if 1
+		0x88<5> 
+	endif 
+	0x55 1
+else 
+	sub 1
+	0x88 
+	if 1
+		0x88<5> 
+	endif 
+	0x51 1
+	0x63 0x1000023
+endif 
+0x8F 0
+0x8E 0
+rest 0	// 0.0 beats
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+rest 0x30	// 1.0 beats
+input 1
+0x106<1> 
+rest 0xC0	// 4.0 beats
+rest 0xC0	// 4.0 beats
+0x104<2> 0xC0
+rest 0xC0	// 4.0 beats
+
+0x101<3> 0x3C0
+async_call kitchenPattern
+rest 0xC0
+async_call kitchenPattern
+rest 0xC0
+async_call kitchenPattern
+rest 0xC0
+async_call kitchenPattern
+rest 0xC0
+async_call kitchenPattern
+rest 0xC0
+async_call sub65
+async_call sub5F
+rest 0xC0
+async_call kitchenPattern
+async_call kitchenPatternBG
+rest 0xC0
+async_call kitchenPattern
+async_call kitchenPatternBG
+rest 0xC0
+0x101<3> 0x480
+async_call kitchenPattern
+rest 0xC0
+async_call sub5F
+rest 0xC0
+async_call sub5F
+rest 0xC0
+async_call ding
+rest 0xc0
+async_call kitchenPattern
+rest 0xC0
+async_call kitchenPattern
+rest 0xC0
+async_call sub65
+async_call sub5F
+rest 0xC0
+async_call sub65
+async_call sub5F
+rest 0xC0
+0x101<3> 0x300
+async_call kitchenPattern
+rest 0xC0
+async_call sub5F
+rest 0xc0
+async_call ding
+rest 0xc0
+async_call ding
+rest 0xc0
+async_call sub65
+async_call sub5F
+0x102<4> 0x30
+rest 0xc0
+0x101<3> 0x240
+async_call kitchenPattern
+rest 0xc0
+async_call sub5F
+rest 0xc0
+async_call sub5F
+rest 0xc0
+0x102<2> 0x48
+async_call kitchenPattern
+async_call kitchenPatternBG
+rest 0xc0
+async_call kitchenPattern
+async_call kitchenPatternBG
+rest 0xc0
+0x101<3> 0x480
+async_call sub5F
+rest 0xc0
+async_call ding
+rest 0xc0
+async_call kitchenPattern
+rest 0xc0
+0x102<4> 0x30
+async_call sub5F
+rest 0xc0
+async_call ding
+rest 0xc0
+async_call ding
+rest 0xc0
+0x102<2> 0x48
+async_call kitchenPattern
+async_call kitchenPatternBG
+rest 0xc0
+async_call sub5F
+async_call sub65
+rest 0xc0
+0x101<3> 0x300
+async_call ding
+rest 0xc0
+async_call sub5F
+rest 0xc0
+0x102<4> 0x30
+async_call kitchenPattern
+rest 0xc0
+async_call kitchenPattern
+rest 0xc0
+async_call kitchenPattern
+async_call kitchenPatternBG
+rest 0xc0
+async_call sub65
+async_call sub5F
+rest 0xc0
+0x102<2> 0x48
+0x101<3> 0x180
+async_call kitchenPattern
+rest 0xc0
+async_call kitchenPattern
+rest 0xc0
+0x102<4> 0x30
+async_call sub5F
+async_call sub65
+rest 0x90
+0x102<2> 0x30
+rest 0x30
+0x102<4> 0x30
+async_call sub5F
+async_call sub65
+rest 0x90
+0x102<2> 0x30
+rest 0x30
+0x101<3> 0x180
+async_call ding
+rest 0xc0
+async_call ding
+rest 0xc0
+async_call sub65
+async_call sub5F
+rest 0xc0
+async_call sub65
+async_call sub5F
+rest 0xc0
+0x101<3> 0x240
+async_call kitchenPattern
+rest 0xc0
+async_call kitchenPattern
+rest 0xc0
+async_call kitchenPattern
+rest 0xc0
+0x100 0
+0x101<1> 0
+0x105<0>
+rest 0x18
+star 0x90
+rest 0x30
+0x8F 7
+rest 0x30
+0x101<1> 2
+0x100 2
+
+0xB6 
+0x88 
+if 1
+	0x8A 
+	0x88<1> 
+	if 2
+		0x8A<6> 1
+	else 
+		if 1
+			async_sub 0x55
+		endif 
+	endif 
+else 
+	0xAB<3> 1
+	if 1
+		async_sub 0x54
+	endif 
+endif 
+rest 0x60	// 2.0 beats
+0xB6<1> 
+0x88 
+if 1
+	0x8A<1> 
+	0x88<1> 
+	if 2
+		0x8A<6> 0
+	endif 
+else 
+endif 
+rest 0x60	// 2.0 beats
+0x104<4> 1
+0x104<3> 0xC0
+0x8F 0
+0x2D 0
+sub 0xB
+stop 

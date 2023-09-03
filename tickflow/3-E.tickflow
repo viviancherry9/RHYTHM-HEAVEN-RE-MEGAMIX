@@ -162,7 +162,7 @@ else
 	endif 
 endif 
 rest 0xC	// 0.25 beats
-0x5D<2> u"GROUP_WSD_MRUPBEAT"
+0x5D<2> u"songs/GROUP_WSD_MRUPBEAT"
 0x81 
 if 0
 	0x86 

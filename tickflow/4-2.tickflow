@@ -503,7 +503,7 @@ else
 	endif 
 endif 
 rest 0xC	// 0.25 beats
-set_sfx 4, u"GROUP_WSD_LOLO"
+set_sfx 4, u"songs/GROUP_WSD_LOLO"
 rest 0xC	// 0.25 beats
 sub 3
 0x83 0

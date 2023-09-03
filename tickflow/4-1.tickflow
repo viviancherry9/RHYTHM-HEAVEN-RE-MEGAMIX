@@ -251,7 +251,7 @@ else
 endif 
 rest 0xC	// 0.25 beats
 
-0x5D<2> u"GROUP_WSD_TUTORIAL_SVT"
+0x5D<2> u"practices/GROUP_WSD_TUTORIAL_SVT"
 0x81 
 if 0
 	0x86 

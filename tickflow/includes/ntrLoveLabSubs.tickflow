@@ -1,0 +1,600 @@
+// Subs for Kievit's Love Lab recreation.
+// Feel free to ask for any help in using these subs on Discord.
+
+// - - REQUIRED SETUP
+// 0x112<3> // Makes boxes appear that cover the Lab Tech
+// 0x8B<1> 0, 14, -43, 28 // Moves "You" to the right place
+// async_call lovelabInputLoop // Allows inputs to animate the player and run the logic
+// This recreation needs to have 0x2B setup done beforehand | 0x2B 0x15, 0xF // Fan Club in it's Unused Remix setup
+
+// - - OTHER IMPORTANT THINGS
+// This recreation requires a code.ips edit made by patataofcourse. Make sure you're using it and include it in the download for your mod
+// Due to several limitations this game might have problems being directly after/before Fan Club in a remix
+//		Make sure Fan Club's SFX aren't loaded before switching to this scene
+// 		Make sure the 0x2B setup is changed before switching to this scene
+// There can't be any patterns until the beat anim is started
+
+// - - USING THE SUBS
+// Subs must be called using `call subName`
+// A three beat gap should always be present between a player flask throw and a player catch (from the next pattern)
+
+// - - List of pre-made subs (based on their equivalent patterns in RHRE3)
+// call lovelabOneHeart
+// call lovelabOneHeartOffbeat
+// call lovelabTwoHeart
+// call lovelabThreeHeart
+// call lovelabFiveHeart
+
+// async_call lovelabBeatAnim, X // Starts beat anim loop in X ticks from now
+// kill_loc lovelabBeatAnim // Ends beat animation loop, makes characters look at eachother
+
+lovelabInputLoop:
+0xB3 3, 0 // Beat anim protection on
+0xB3 1, 0 // Effect Off
+label 0x10FE
+0xB2 0 // Get input state
+switch
+	case 0 // Empty hand
+		0xB2 4
+		if 1
+			goto 0x100A
+		endif
+		0x200<2> 0 // Check if A is held
+		if 1
+			0xB3 4, 1 // Is held 
+			// - - Shake down (Empty hand)
+			0xB2 3
+			if 1
+				0x110 1, 0, 0
+			endif
+			0x111 1, 2
+			0x108 2
+			//- -
+			label 0x100A
+			0xB2 0
+			if 3
+				goto 0x100B
+			endif
+			0x200<2> 0 // Check if A is held
+			if 0
+				0xB3 4, 0 // Not held
+				// - - Shake up (Empty hand)
+				0xB2 3
+				if 1
+					0x110 1, 0, 0
+				endif
+				0x111 1, 2
+				0x109 0, 2
+				
+				// - -
+				goto 0x10FE
+			endif
+			rest 1
+			goto 0x100A
+		endif
+	break	
+
+	case 1 // Catch
+		0x200<2> 0 // Check if A is held
+		if 1
+		input 1
+			// - - Catch
+			0x111 0, 2
+			0x108 1
+			0x107 0 // Stop blue flask anim
+			play_sfx 0x1000B42 // SFX catch
+			//- -
+			0xB3 0, 2 // Set state to shake
+			goto 0x100C // To shake up
+		endif
+	break	
+	
+	case 2 // Shake
+		0x200<2> 0 // Check if A is held
+		if 1
+			// - - Shake down
+			0x111 0, 2
+			0x109 0, 1
+			play_sfx 0x1000B40 //SFX down
+			//- -
+			label 0x100C
+			0xB2 0
+			if 4
+				goto 0x100D
+			endif
+			0x200<2> 0 // Check if A is held
+			if 0
+				// - - Shake up
+				0x111 0, 2
+				0x10A 1
+				play_sfx 0x1000B43 // SFX up
+				0xB2 2
+				if 0
+					call lovelabInputEffect
+				endif
+				// - -
+				goto 0x10FE
+			endif
+			rest 1
+			goto 0x100C
+		endif
+	break
+	
+	case 3 // Throw (Empty hand)
+		0xB2 4
+		if 1
+			goto 0x100B
+		endif
+		0x200<2> 0 // Check if A is held
+		if 1
+
+			// - - Shake down (Empty hand)
+			0xB2 3
+			if 1
+				0x110 1, 0, 0
+			endif
+			0x111 1, 2
+			0x108 2
+			//- -
+			label 0x100B
+			0xB2 0
+			if 0
+				goto 0x10FE
+			endif
+			0x200<2> 0 // Check if A is held
+			if 0
+				// - - Throw (Empty hand)
+				//0xB2 3
+				//if 1
+				//	0x110 1, 0, 0
+				//endif
+				0x111 1, 2
+				0x10B 2
+				0xB3 0, 0 // Set state to empty hand
+				0xB3 4, 0 // Not held
+				rest 12 // Delay for animation
+				// - -
+				goto 0x10FE
+			endif
+			rest 1
+			goto 0x100B
+		endif
+	break
+	
+	case 4 // Throw
+		0x200<2> 0 // Check if A is held
+		if 1
+			// - - Shake down
+			0x111 0, 2
+			0x109 0, 1
+			play_sfx 0x1000B40 //SFX down
+			//- -
+			label 0x100D
+			0xB2 0
+			if 0
+				goto 0x10FE
+			endif
+			if 5
+				goto 0x10FE
+			endif
+			0x200<2> 0 // Check if A is held
+			if 0
+			async_call disableInputs
+				// - - Throw
+				//0xB2 3
+				//if 1
+				//	0x110 1, 0, 0
+				//endif
+				0x111 1, 2
+				0x10A 2
+				0x10B 1// ANIM FOR FLASK BEING FLUNG HERE
+				0xB3 3, 0  // Anim protection on
+				0xB3 1, 8  // Combine on
+				play_sfx 0x1000B46
+				0xB3 0, 0 // Set state to empty hand
+				rest 30 // Delay for animation
+				// - -
+				goto 0x10FE
+			endif
+			rest 1
+			goto 0x100D
+		endif
+	break	
+
+	case 5 // Shatter
+		input 0
+		0xB3 0, 0 // Set state to empty hand
+		0xB3 3, 0  // Anim protection on
+		rest 16
+		0x200<2> 0 // Check if A is held
+		if 1
+			label 0x100E
+			0x200<2> 0 // Check if A is held
+			if 0
+				goto 0x100F
+			endif
+			rest 1
+			goto 0x100E
+		endif
+	break
+endswitch
+
+rest 1
+goto 0x10FE
+stop
+
+disableInputs:
+rest 0xC
+input 0
+stop
+			
+lovelabInputEffect:
+0xB2 1
+switch
+	case 1
+		0x3B 2, 1, "cmn_ok01", -0x50, 0, 0x100, 0x18
+	break
+	case 2
+		0x3B 2, 1, "cmn_ok00", -0x26, 0, 0x100, 0x18
+	break
+	case 3
+		0x3B 2, 1, "cmn_just00", 0, 0, 0x100, 0x18
+	break
+	case 4
+		0x3B 2, 1, "cmn_ok00", 0x26, 0, 0x100, 0x18
+	break
+	case 5
+		0x3B 2, 1, "cmn_ok01", 0x50, 0, 0x100, 0x18
+	break	
+endswitch
+0xB3 2, 1 // Lock
+return		
+			
+lovelabInputShakeUp: //Imagine this as a replacement for the 0x100 command for the shake up input
+0xB3 2, 0 // Unlock
+rest 18
+0xB3 1, 1
+rest 2
+0xB3 1, 2
+rest 3
+0xB3 1, 3
+rest 2
+0xB3 1, 4
+rest 3
+0xB3 1, 5
+rest 4
+0xB3 1, 0	
+0xB3 2, 1 // Lock
+stop			
+			
+lovelabCatchBlueOneBeat: // 1 beat early		
+0x108 0
+rest 0x30
+play_sfx 0x1000B42 // SFX catch
+stop
+
+lovelabCatchBlueOffbeat: // 1 beat early		
+0x10B 0
+rest 0x30
+play_sfx 0x1000B42 // SFX catch
+stop
+
+lovelabCatchBlueTwoBeat: // 1 beat early		
+0x10D 0
+rest 0x30
+play_sfx 0x1000B42 // SFX catch
+stop
+
+lovelabShakeDownBlue: // Instant
+0x109 0, 0
+play_sfx 0x1000B40 //SFX down
+stop
+
+lovelabShakeUpBlue: // Instant
+0x10A 0
+play_sfx 0x1000B43 // SFX up
+stop
+
+lovelabThrowBlueOneBeat: // 1/4 beat early
+rest 4
+0xB3 0, 3 // Throw (Empty)
+rest 8
+0x10E
+play_sfx 0x1000B46 //SFX throw
+rest 8
+0xB3 0, 0
+stop
+
+lovelabThrowBlueOffbeat: // 1/4 beat early
+rest 4
+0xB3 0, 3 // Throw (Empty)
+rest 8
+0x10F
+play_sfx 0x1000B46 //SFX throw
+rest 8
+0xB3 0, 0
+stop	
+			
+lovelabThrowBlueTwoBeat: // 1/4 beat early
+rest 4
+0xB3 0, 3 // Throw (Empty)
+rest 8
+0x10E<1>
+play_sfx 0x1000B46 //SFX throw
+rest 8
+0xB3 0, 0
+stop
+
+lovelabCatch: // 1 beat early
+rest 0x18
+input 1
+0xB3 0, 0
+0x100<0> //Press A in 0.5
+rest 16
+0xB3 0, 1
+rest 8
+// Ace!
+rest 8
+0xB2 0
+if_neq 2
+	0xB3 0, 0
+	input 0
+	play_sfx 0x1000B45 // SFX break
+	// BLUE FLASK SHATTER
+endif
+stop			
+			
+lovelabShakeDown: // 1 beat early
+rest 0x18
+0x100<0> //Press A in 0.5
+stop
+
+lovelabShakeUp: // 1 beat early
+rest 0x18
+call lovelabInputShakeUp // Release A in 0.5
+stop
+
+lovelabThrow: // 1 beat early
+0x100<2> //Release A in 1.0
+rest 40
+0xB2 0 // Get state
+if 2
+	0xB3 0, 4 // Throw
+else
+	0xB3 0, 3 // Throw (Empty)
+endif
+rest 8
+// Ace!
+rest 8
+0xB2 0 // Get state
+switch
+	case 0
+	break
+	case 3
+		0xB3 0, 0
+	break
+	default
+		0xB3 0, 5
+		0x10D 1
+		0x111 1, 2
+		0x10D 2
+		rest 24
+		play_sfx 0x1000B45 // SFX break
+		
+	break
+endswitch
+
+stop
+
+lovelabHeartCombine:
+0xB2 1
+if 8
+	play_sfx 0x1000B44
+endif
+0xB3 1, 0
+stop
+
+
+lovelabBeatAnim:
+0x110 1, 0, 0 //hide fake scientists
+lovelabBeatAnimRemix:
+0xB3 3, 1
+label 0x10FF
+0x112<2> // Beat 2x
+rest 0x60
+goto 0x10FF
+stop
+
+lovelabRemixTransition:
+//1/2 before catch
+0x109 0, 0 // Makes sure Senior Lab Partner's arm is gonna be down
+0x111 0, 0 // Hides Senior Lab Partner's arm
+0x110 1, 0, 1 // 1/2 beat catch anim
+rest 0x18
+play_sfx 0x1000B42 // SFX catch
+async_call lovelabBeatAnimRemix
+rest 0xC // Time so the catch anim can play
+async_call lovelabInputLoop // Cause there might be some interference otherwise
+0x110 1, 0, 0 // Fix initial
+0x111 1, 0 // Unhides Senior Lab Partner's arm
+stop
+
+lovelabOneHeart:
+async_call lovelabCatchBlueOneBeat
+rest 0x30
+// Catch!
+rest 0x24
+async_call lovelabThrowBlueOneBeat
+rest 0xC
+async_call lovelabCatch
+rest 0x30
+async_call lovelabThrow
+rest 0x30
+async_call lovelabHeartCombine, 0x30
+return
+
+lovelabOneHeartPractice:
+async_call lovelabCatchBlueOneBeat
+rest 0x30
+// Catch!
+rest 0x24
+async_call lovelabThrowBlueOneBeat
+rest 0xC
+0xA2
+async_call lovelabCatch
+rest 0x30
+async_call lovelabThrow
+rest 0x18
+0x9F<5> 1
+rest 0x18
+async_call lovelabHeartCombine, 0x30
+return
+
+lovelabOneHeartOffbeat:
+async_call lovelabCatchBlueOffbeat
+rest 0x30
+// Catch!
+rest 0xC
+async_call lovelabThrowBlueOffbeat
+rest 0xC
+rest 0x18
+async_call lovelabCatch
+rest 0x18
+async_call lovelabThrow
+rest 0x30
+async_call lovelabHeartCombine, 0x30
+return
+
+lovelabTwoHeart:
+async_call lovelabCatchBlueOneBeat
+rest 0x30
+// Catch!
+rest 0x18
+async_call lovelabShakeUpBlue
+rest 0xC
+async_call lovelabShakeDownBlue
+async_call lovelabThrowBlueOneBeat
+rest 0xC
+async_call lovelabCatch
+rest 0x18
+async_call lovelabShakeUp
+rest 0xC
+async_call lovelabShakeDown
+rest 0xC
+async_call lovelabThrow
+rest 0x30
+async_call lovelabHeartCombine, 0x30
+return
+
+lovelabThreeHeart:
+async_call lovelabCatchBlueTwoBeat
+rest 0x30
+// Catch!
+rest 0x30
+async_call lovelabShakeUpBlue
+rest 0xC
+async_call lovelabShakeDownBlue
+rest 0xC
+async_call lovelabShakeUpBlue
+rest 0xC
+async_call lovelabShakeDownBlue
+async_call lovelabThrowBlueTwoBeat
+rest 0xC
+rest 0x30
+async_call lovelabCatch
+rest 0x30
+async_call lovelabShakeUp
+rest 0xC
+async_call lovelabShakeDown
+rest 0xC
+async_call lovelabShakeUp
+rest 0xC
+async_call lovelabShakeDown
+rest 0xC
+async_call lovelabThrow
+rest 0x30
+rest 0x30
+async_call lovelabHeartCombine
+return
+
+lovelabThreeHeartPractice:
+async_call lovelabCatchBlueTwoBeat
+rest 0x30
+// Catch!
+rest 0x30
+async_call lovelabShakeUpBlue
+rest 0xC
+async_call lovelabShakeDownBlue
+rest 0xC
+async_call lovelabShakeUpBlue
+rest 0xC
+async_call lovelabShakeDownBlue
+async_call lovelabThrowBlueTwoBeat
+rest 0xC
+rest 0x30
+0xA2
+async_call lovelabCatch
+rest 0x30
+async_call lovelabShakeUp
+rest 0xC
+async_call lovelabShakeDown
+rest 0xC
+async_call lovelabShakeUp
+rest 0xC
+async_call lovelabShakeDown
+rest 0xC
+async_call lovelabThrow
+rest 0x2A
+0x9F<5> 1
+rest 0x6
+rest 0x30
+async_call lovelabHeartCombine
+return
+
+lovelabFiveHeart:
+async_call lovelabCatchBlueOneBeat
+rest 0x30
+// Catch!
+rest 0x18
+async_call lovelabShakeUpBlue
+rest 0xC
+async_call lovelabShakeDownBlue
+rest 0xC
+async_call lovelabShakeUpBlue
+rest 0xC
+async_call lovelabShakeDownBlue
+rest 0xC
+rest 0x18
+async_call lovelabShakeUpBlue
+rest 0xC
+async_call lovelabShakeDownBlue
+rest 0xC
+async_call lovelabShakeUpBlue
+rest 0xC
+async_call lovelabShakeDownBlue
+async_call lovelabThrowBlueOneBeat
+rest 0xC
+async_call lovelabCatch
+rest 0x18
+async_call lovelabShakeUp
+rest 0xC
+async_call lovelabShakeDown
+rest 0xC
+async_call lovelabShakeUp
+rest 0xC
+async_call lovelabShakeDown
+rest 0xC
+rest 0x18
+async_call lovelabShakeUp
+rest 0xC
+async_call lovelabShakeDown
+rest 0xC
+async_call lovelabShakeUp
+rest 0xC
+async_call lovelabShakeDown
+rest 0xC
+async_call lovelabThrow
+rest 0x30
+async_call lovelabHeartCombine, 0x30
+return
+

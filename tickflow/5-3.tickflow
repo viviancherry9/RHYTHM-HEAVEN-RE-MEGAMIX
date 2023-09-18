@@ -221,7 +221,7 @@ rest 0xC
 async_call lovelabThrow
 rest 0x30
 async_call lovelabHeartCombine, 0x30
-0x8F 0
+async_sub 0x4B, 0x30, 0
 call lovelabOneHeart
 call lovelabOneHeart
 call lovelabThreeHeart

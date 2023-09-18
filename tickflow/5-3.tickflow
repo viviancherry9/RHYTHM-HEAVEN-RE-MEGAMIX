@@ -170,12 +170,28 @@ call lovelabOneHeart
 call lovelabTwoHeart
 rest 0x18
 call lovelabOneHeartOffbeat // Skill star on this one?
-star 0xC0
-0x8F 7
+call lovelabTwoHeart
+call lovelabOneHeart
+call lovelabFiveHeart
+call lovelabOneHeart
+call lovelabOneHeart
 async_call lovelabCatchBlueOneBeat
 rest 0x30
 // Catch!
 rest 0x18
+async_call lovelabShakeUpBlue
+rest 0xC
+async_call lovelabShakeDownBlue
+rest 0xC
+async_call lovelabShakeUpBlue
+rest 0xC
+async_call lovelabShakeDownBlue
+rest 0xC
+rest 0x18
+async_call lovelabShakeUpBlue
+rest 0xC
+async_call lovelabShakeDownBlue
+rest 0xC
 async_call lovelabShakeUpBlue
 rest 0xC
 async_call lovelabShakeDownBlue
@@ -187,15 +203,25 @@ async_call lovelabShakeUp
 rest 0xC
 async_call lovelabShakeDown
 rest 0xC
+async_call lovelabShakeUp
+star 0x90
+0x8F 7
+rest 0xC
+async_call lovelabShakeDown
+rest 0xC
+rest 0x18
+async_call lovelabShakeUp
+rest 0xC
+async_call lovelabShakeDown
+rest 0xC
+async_call lovelabShakeUp
+rest 0xC
+async_call lovelabShakeDown
+rest 0xC
 async_call lovelabThrow
 rest 0x30
 async_call lovelabHeartCombine, 0x30
 0x8F 0
-call lovelabOneHeart
-call lovelabFiveHeart
-call lovelabOneHeart
-call lovelabOneHeart
-call lovelabFiveHeart
 call lovelabOneHeart
 call lovelabOneHeart
 call lovelabThreeHeart
@@ -243,7 +269,7 @@ set_cat 0
 0x94 0, "result_common_Hi", "result_common_Ok", "result_common_Ng"
 0x95 0x10, "remix_caption"
 0x95 0x10, "remix_LED_caption"
-0x98 1, 4
+0x98 1, 5
 stop
 
 

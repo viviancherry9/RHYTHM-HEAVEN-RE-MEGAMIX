@@ -205,9 +205,9 @@ async_call lovelabShakeDown
 rest 0xC
 async_call lovelabShakeUp
 star 0x90
-0x8F 7
 rest 0xC
 async_call lovelabShakeDown
+0x8F 7
 rest 0xC
 rest 0x18
 async_call lovelabShakeUp

@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 #First extract coffee_common
 cd ../USlayout/coffee_common/
 python2 ../../utils/sarc.py -xzf coffee_common.zlib

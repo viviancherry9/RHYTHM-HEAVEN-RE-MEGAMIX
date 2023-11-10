@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 #First rebuild coffee_common
 echo "Rebuilding coffee_common..."
 cd ../USlayout/coffee_common/

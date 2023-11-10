@@ -1,3 +1,5 @@
+# NOTE: THIS REPOSITORY IS DEPRECATED. SEE THE NEW VERSION HERE: https://github.com/TheAlternateDoctor/RHYTHM-HEAVEN-RE-MEGAMIX
+
 # RHYTHM HEAVEN RE-MEGAMIX
 a massive CTGP-esque modpack for Rhythm Heaven Megamix, containing mods from tons of members of the community. This mod aims to replace every single slot with something custom (including endless games thanks to patataofcourse!) to create a brand new campaign. 
 

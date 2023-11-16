@@ -1,2 +1,5 @@
 tickflow/C00.bin
 tickflow/Compiled/*.bin
+
+rhmm/*
+!rhmm/.gitkeep

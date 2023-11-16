@@ -35,7 +35,7 @@ rm -rf map_figure/anim map_figure/map_figure_ map_figure/blyt
 rm -rf map_room/anim map_room/map_room_ map_room/blyt map_room/font
 
 #We wait for user input before cleaning the timg folder
-read -p "Press [Enter] once you're done checking!"
+read -ps "Press [Enter] once you're done checking!"
 rm -rf coffee_common/timg
 rm -rf coffee_game/timg
 rm -rf coffee_shopItem/timg
